@@ -7,6 +7,12 @@
     line-height: 2;
     text-align: center;
     margin-bottom: @gridGutterWidth;
+    
+    [class*="span"] {
+      background: darken(@selectionColor, 10%);
+      margin-bottom: 0 !important;
+    }
+    
   }
   
   &.alternative {
