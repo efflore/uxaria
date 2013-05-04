@@ -1,0 +1,28 @@
+// Show grid
+.show-grid {
+  
+  [class*="span"] {
+    background: @selectionColor;
+    min-height: 2em;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: @gridGutterWidth;
+  }
+  
+  &.alternative {
+    
+    [class*="span"] {
+      margin-bottom: @alternativeGridGutterWidth;
+    }
+    
+  }
+  
+  &.tiles {
+    
+    [class*="span"] {
+      margin-bottom: @tilesGridGutterWidth;
+    }
+    
+  }
+  
+}

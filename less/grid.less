@@ -6,6 +6,7 @@
 // Container (centered, fixed-width layouts)
 .container {
   .container-fixed();
+  padding: 0 @gridGutterWidth;
 }
 
 // Fluid layouts (left aligned, with sidebar, min- & max-width content)
@@ -21,11 +22,17 @@
 // --------------------------------------------------
 
 
-// Fixed (940px)
+// Fixed
 #grid > .core(@gridColumnWidth, @gridGutterWidth);
 
-// Fluid (940px)
-#grid > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);
+.row.alternative {
+  #grid > .core(@alternativeGridColumnWidth, @alternativeGridGutterWidth);
+}
+
+.row.tiles {
+  #grid > .core(@tilesGridColumnWidth, @tilesGridGutterWidth);
+  margin-right: -@gridGutterWidth;
+}
 
 // Reset utility classes due to specificity
 [class*="span"].hide,

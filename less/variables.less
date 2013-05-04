@@ -50,11 +50,11 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          131.25%; // 21px
+@baseFontSize:          1.25em; // 20px
 @baseFontFamily:        @sansFontFamily;
-@narrowLineHeight:      1.14; // ~36px
-@baseLineHeight:        1.43; // ~30px
-@wideLineHeight:        1.71; // ~24px
+@narrowLineHeight:      1.2; // ~24px
+@baseLineHeight:        1.4; // ~28px
+@wideLineHeight:        1.6; // ~32px
 @altFontFamily:         @serifFontFamily;
 @fontWeightLight:       300;
 @fontWeightRegular:     400;
@@ -64,20 +64,20 @@
 @headingsFontWeight:    @fontWeightBold; // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
-@paragraphMargin:       @halfGridGutterWidth;
+@paragraphMargin:       (@baseLineHeight * 0.5em);
 
 
 // Component sizing
 // -------------------------
-// Based on 15px font-size and 21px line-height
+// Based on 20px font-size and 28px line-height
 
-@fontSizeLarge:         129%; // ~27px
-@fontSizeSmall:         86%; // ~18px
-@fontSizeMini:          71%; // ~15px
+@fontSizeLarge:         120%; // ~24px
+@fontSizeSmall:         85%; // ~17px
+@fontSizeMini:          70%; // ~14px
 
-@paddingLarge:          12px 24px; // 46px
-@paddingSmall:          3px 12px;  // 28px
-@paddingMini:           0 6px;   // 22px
+@paddingLarge:          @halfGridGutterWidth @gridGutterWidth;
+@paddingSmall:          3px @halfGridGutterWidth;
+@paddingMini:           0 @quarterGridGutterWidth;
 
 @baseBorderRadius:      4px;
 @borderRadiusLarge:     6px;
@@ -278,36 +278,34 @@
 // --------------------------------------------------
 
 
-// Default 1200px grid
+// Default grid
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         78px;
-@gridGutterWidth:         24px;
+@gridColumnWidth:         4em;
+@gridGutterWidth:         1.4em;
 @halfGridGutterWidth:     (@gridGutterWidth / 2);
 @quarterGridGutterWidth:  (@gridGutterWidth / 4);
 @doubleGridGutterWidth:   (@gridGutterWidth * 2);
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
-// 1200px min
-@gridColumnWidth1200:     70px;
-@gridGutterWidth1200:     30px;
-@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
-// 768px-979px
-@gridColumnWidth768:      42px;
-@gridGutterWidth768:      20px;
-@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
-
-
-// Fluid grid
+// Alternative grid
 // -------------------------
-@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
-@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+@alternativeGridColumnWidth: 2.7em;
+@alternativeGridGutterWidth: 2.6em;
+@alternativeGridRowWidth:    (@gridColumns * @alternativeGridColumnWidth) + (@alternativeGridGutterWidth * (@gridColumns - 1));
 
-// 1200px min
-@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
-@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
 
-// 768px-979px
-@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
-@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+// Tiles grid
+// -------------------------
+@tilesGridColumnWidth:    5.3em;
+@tilesGridGutterWidth:    0.2em;
+@tilesGridRowWidth:       (@gridColumns * @tilesGridColumnWidth) + (@tilesGridGutterWidth * (@gridColumns - 1));
+
+
+// Adaptive grid
+// -------------------------
+@tabletGridColumns:       9;
+@phoneGridColumns:        6;
+@tabletGridRowWidth:      (@tabletGridColumns * @gridColumnWidth) + (@gridGutterWidth * (@tabletGridColumns - 1));
+@phoneGridRowWidth:       (@phoneGridColumns * @gridColumnWidth) + (@gridGutterWidth * (@phoneGridColumns - 1));

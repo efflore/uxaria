@@ -616,6 +616,40 @@
     .offsetX (@gridColumns);
 
   }
+  
+  .tablet (@gridColumnWidth, @gridGutterWidth) {
+
+    .spanX (@index) when (@index > 0) {
+      .span@{index}-tablet { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+
+    .span (@columns) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    }
+
+    // generate .spanX
+    .spanX (@tabletGridColumns);
+
+  }
+  
+  .phone (@gridColumnWidth, @gridGutterWidth) {
+
+    .spanX (@index) when (@index > 0) {
+      .span@{index}-phone { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+
+    .span (@columns) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    }
+
+    // generate .spanX
+    .spanX (@phoneGridColumns);
+
+  }
 
   .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 

@@ -1,18 +1,208 @@
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+// phone
+@media screen and (max-width: 568px) { body { font-size: 0.9375em; } } // 15px - most phones portrait and landscape
+@media screen and (min-width: 569px) and (max-width: 599px) { body { font-size: 1em; } } // 16px
+@media screen and (min-width: 600px) and (max-width: 639px) { body { font-size: 1.0625em; } } // 17px
+@media screen and (min-width: 640px) and (max-width: 679px) { body { font-size: 1.125em; } } // 18px
+@media screen and (min-width: 680px) and (max-width: 719px) { body { font-size: 1.1875em; } } // 19px
+@media screen and (min-width: 720px) and (max-width: 749px) { body { font-size: 1.25em; } } // 20px
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media screen and (max-width: 511px){
+
+  .container {
+    width: auto;
+    padding: 0 @gridGutterWidth;
+  }
+  
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+    
+    &.tiles {
+      margin-right: 0;
+    }
+    
+  }
+  
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"],
+  .row.alternative [class*="span"],
+  .row.tiles [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  
+  .row.alternative [class*="span"] {
+    margin-left: (@alternativeGridGutterWidth - @gridGutterWidth);
+    margin-right: (@alternativeGridGutterWidth - @gridGutterWidth);
+    width: auto;
+  }
+  
+  .row.tiles [class*="span"] {
+    margin-left: (@tilesGridGutterWidth - @gridGutterWidth);
+    margin-right: (@tilesGridGutterWidth - @gridGutterWidth);
+    width: auto;
+  }
+  
+  .span12,
+  .row-fluid .span12,
+  .row.alternative .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+
 }
 
+@media screen and (min-width: 512px) and (max-width: 749px){
+
+  .container {
+    width: @phoneGridRowWidth;
+  }
+  
+  .span6,
+  .span7,
+  .span8,
+  .span9,
+  .span10,
+  .span11,
+  .span12 {
+    width: @phoneGridRowWidth;
+    margin-left: @gridGutterWidth;
+  }
+  
+  .row.alternative {
+    
+    .span6,
+    .span7,
+    .span8,
+    .span9,
+    .span10,
+    .span11,
+    .span12 {
+      width: (@alternativeGridColumnWidth * @phoneGridColumns + @alternativeGridGutterWidth * (@phoneGridColumns - 1));
+      margin-left: @alternativeGridGutterWidth;
+    }
+    
+  }
+  
+  .row.tiles {
+    margin-right: -@gridGutterWidth;
+    
+    .span6,
+    .span7,
+    .span8,
+    .span9,
+    .span10,
+    .span11,
+    .span12 {
+      width: (@tilesGridColumnWidth * @phoneGridColumns + @tilesGridGutterWidth * (@phoneGridColumns - 1));
+      margin-left: @tilesGridGutterWidth;
+    }
+    
+  }
+  
+  #grid > .phone(@gridColumnWidth, @gridGutterWidth);
+  
+  .row.alternative {
+    #grid > .phone(@alternativeGridColumnWidth, @alternativeGridGutterWidth);
+  }
+  
+  .row.tiles {
+    #grid > .phone(@tilesGridColumnWidth, @tilesGridGutterWidth);
+  }
+
+}
+
+
+// tablet
+@media screen and (min-width: 750px) and (max-width: 799px) { body { font-size: 0.9375em; } } // 15px - iPad portrait
+@media screen and (min-width: 800px) and (max-width: 849px) { body { font-size: 1em; } } // 16px
+@media screen and (min-width: 850px) and (max-width: 899px) { body { font-size: 1.0625em; } } // 17px
+@media screen and (min-width: 900px) and (max-width: 949px) { body { font-size: 1.125em; } } // 18px
+@media screen and (min-width: 950px) and (max-width: 999px) { body { font-size: 1.1875em; } } // 19px
+@media screen and (min-width: 1000px) and (max-width: 1023px) { body { font-size: 1.25em; } } // 20px
+
+@media screen and (min-width: 750px) and (max-width: 1023px) {
+  
+  .container {
+    width: @tabletGridRowWidth;
+  }
+  
+  .span9,
+  .span10,
+  .span11,
+  .span12 {
+    width: @tabletGridRowWidth;
+    margin-left: @gridGutterWidth;
+  }
+  
+  .row.alternative {
+    
+    .span9,
+    .span10,
+    .span11,
+    .span12 {
+      width: (@alternativeGridColumnWidth * @tabletGridColumns + @alternativeGridGutterWidth * (@tabletGridColumns - 1));
+      margin-left: @alternativeGridGutterWidth;
+    }
+    
+  }
+  
+  .row.tiles {
+    
+    .span9,
+    .span10,
+    .span11,
+    .span12 {
+      width: (@tilesGridColumnWidth * @tabletGridColumns + @tilesGridGutterWidth * (@tabletGridColumns - 1));
+      margin-left: @tilesGridGutterWidth;
+    }
+    
+  }
+  
+  #grid > .tablet(@gridColumnWidth, @gridGutterWidth);
+  
+  .row.alternative {
+    #grid > .tablet(@alternativeGridColumnWidth, @alternativeGridGutterWidth);
+  }
+  
+  .row.tiles {
+    #grid > .tablet(@tilesGridColumnWidth, @tilesGridGutterWidth);
+  }
+
+}
+
+
+// desktop
+@media screen and (min-width: 1024px) and (max-width: 1089px) { body { font-size: 0.9375em; } } // 15px - iPad landscape
+@media screen and (min-width: 1090px) and (max-width: 1159px) { body { font-size: 1em; } } // 16px
+@media screen and (min-width: 1160px) and (max-width: 1229px) { body { font-size: 1.0625em; } } // 17px
+@media screen and (min-width: 1230px) and (max-width: 1299px) { body { font-size: 1.125em; } } // 18px
+@media screen and (min-width: 1300px) and (max-width: 1365px) { body { font-size: 1.1875em; } } // 19px
+
+/* Style adjustments for high resolution devices */
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi){
+       (min-resolution: 120dpi) {
   
-  /* Style adjustments for high resolution devices */
   
 }
