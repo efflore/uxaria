@@ -54,10 +54,12 @@
         </div>
       </div>
       
+      <hr />
+      
       <div class="row">
         <div class="span9">
           
-          <h2 id="basics">Basic Styles</h2>
+          <h2 id="basic">Basic Styles</h2>
           
         </div>
         <div class="span6 offset1">
@@ -74,18 +76,24 @@
         <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
           
           <section>
-            <h3>Color</h3>
+            <h3>Colors</h3>
             <p>Uxaria sets the following default colors:</p>
-            <ul>
-              <li>Background: #fff</li>
-              <li>Text: #222</li>
-              <li>Links: #3a6bd3, hover: #0f51b3</li>
-              <li>Selection: #afe3fd</li>
-            </ul>
+            <dl>
+              <dt>Background</dt>
+              <dd><span class="color-swatch" style="background: #fff">&nbsp;</span> <code>#fff</code></dd>
+              <dt>Text</dt>
+              <dd><span class="color-swatch" style="background: #222">&nbsp;</span> <code>#222</code><br /><span class="color-swatch" style="background: #444">&nbsp;</span> <code>#444</code> for headings and bold</dd>
+              <dt>Links</dt>
+              <dd><span class="color-swatch" style="background: #3a6bd3">&nbsp;</span> <code>#3a6bd3</code><br /><span class="color-swatch" style="background: #0f51b3">&nbsp;</span> <code>#0f51b3</code> on mouseover</dd>
+              <dt>Selection</dt>
+              <dd><span class="color-swatch" style="background: #afe3fd">&nbsp;</span> <code>#afe3fd</code></dd>
+            </dl>
           </section>
           
         </div>
       </div>
+      
+      <hr />
       
       <div class="row">
         <div class="span9">
@@ -104,15 +112,15 @@
             <h4>Responsive Grid</h4>
             <p>Instead of shrinking / widening column and gutter widths in responsive design (like Bootstrap and most other frameworks do), Uxaria reduces the number of colums available. On tablet in portrait orientation each row consists of 9 grid columns. This is further reduced to 6 grid colmns on mobile phones in landscape orientation. For mobile phones in portrait orientation we finally stack the columns vertically.</p>
             <p>The layout breakpoints are:</p>
-            <dl>
-              <dt>Phone portrait: up to 511px</dt>
-              <dd>all columns stacked vertically</dd>
-              <dt>Phone landscape: from 512px to 749px</dt>
-              <dd>6 columns</dd>
-              <dt>Tablet portrait: from 750px to 1023px</dt>
-              <dd>9 columns</dd>
-              <dt>Tablet landscape and desktop: 1024px and up</dt>
-              <dd>12 columns</dd>
+            <dl class="dl-horizontal">
+              <dt>Phone portrait</dt>
+              <dd>up to 511px<br /> all columns stacked vertically</dd>
+              <dt>Phone landscape</dt>
+              <dd>from <strong>512px</strong> to 749px<br />6 columns</dd>
+              <dt>Tablet portrait</dt>
+              <dd>from <strong>768px</strong> to 1023px<br />9 columns</dd>
+              <dt>Tablet landscape<br />and desktop</dt>
+              <dd><strong>1024px</strong> and up<br />12 columns</dd>
             </dl>
             <p>The motivation behind this design decision is to give you as a web designer fine-grained control over responsive layout mechanics while keeping all proportions within content elements as constant as possible on all devices. Assign the helper classes <code>span*-phone</code> and <code>span*-tablet</code> to rearrange elements for smaller screens.</p>
           </section>
@@ -123,37 +131,42 @@
           <section>
             <h4>Dimensions</h4>
             <p>With the minimum and maximum font sizes, all grid dimensions evalute to integer pixel values, making near pixel-perfect design with relative units possible.</p>
-            <table>
+            <table class="table">
               <thead>
                 <tr>
-                  <th scope="row">Font size</th>
+                  <th scope="row" colspan="2">Font size</th>
                   <th scope="col">0.9375em<br />15px</th>
                   <th scope="col">1.25em<br />20px</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Column width: 4em</th>
+                  <th scope="row">Column</th>
+                  <td>4em</td>
                   <td>60px</td>
                   <td>80px</td>
                 </tr>
                 <tr>
-                  <th scope="row">Gutter width: 1.4em</th>
+                  <th scope="row">Gutter</th>
+                  <td>1.4em</td>
                   <td>21px</td>
                   <td>28px</td>
                 </tr>
                 <tr>
-                  <th scope="row">12-col row width: 63.4em</th>
+                  <th scope="row">12-column row</th>
+                  <td>63.4em</td>
                   <td>951px</td>
                   <td>1268px</td>
                 </tr>
                 <tr>
-                  <th scope="row">9-col row width: 47.2em</th>
+                  <th scope="row">9-column row</th>
+                  <td>47.2em</td>
                   <td>708px</td>
                   <td>944px</td>
                 </tr>
                 <tr>
-                  <th scope="row">6-col row width: 31em</th>
+                  <th scope="row">6-column row</th>
+                  <td>31em</td>
                   <td>465px</td>
                   <td>620px</td>
                 </tr>
@@ -164,11 +177,7 @@
         </div>
         <div class="span6">
           
-          <section>
-            
-            <h4>Live Example</h4>
-            
-          </section>
+          <h4>Live Example</h4>
           
         </div>
       </div>
@@ -225,10 +234,68 @@
       <div class="row">
         <div class="span9">
           
+          <h3>Alternative Grid</h3>
+          
+        </div>
+        <div class="span6 offset1">
+          
           <section>
-            <h3>Alternative Grid</h3>
-            <p>12 columns, each 2.7em wide with extra wide gutter (2.6em).</p>
+            <p>This grid adds extra whitespace between the blocks. It's best suited for icon rows and generously spaced text columns or boxes.</p>
+            <p>To use this grid, simply add the additional class <code>alternative</code> to the row.</p>
           </section>
+          
+        </div>
+        <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
+          
+          <section>
+            <h4>Dimensions</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="row" colspan="2">Font size</th>
+                  <th scope="col">0.9375em<br />15px</th>
+                  <th scope="col">1.25em<br />20px</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Column</th>
+                  <td>2.7em</td>
+                  <td>40.5px</td>
+                  <td>54px</td>
+                </tr>
+                <tr>
+                  <th scope="row">Gutter</th>
+                  <td>2.6em</td>
+                  <td>39px</td>
+                  <td>52px</td>
+                </tr>
+                <tr>
+                  <th scope="row">12-column row</th>
+                  <td>61em</td>
+                  <td>915px</td>
+                  <td>1220px</td>
+                </tr>
+                <tr>
+                  <th scope="row">9-column row</th>
+                  <td>45.1em</td>
+                  <td>676.5px</td>
+                  <td>902px</td>
+                </tr>
+                <tr>
+                  <th scope="row">6-column row</th>
+                  <td>29.2em</td>
+                  <td>438px</td>
+                  <td>584px</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+            
+        </div>
+        <div class="span6">
+          
+          <h4>Live Example</h4>
           
         </div>
       </div>
@@ -285,10 +352,68 @@
       <div class="row">
         <div class="span9">
           
+          <h3>Tiles Grid</h3>
+          
+        </div>
+        <div class="span6 offset1">
+          
           <section>
-            <h3>Tiles Grid</h3>
-            <p>12 columns, each 5.3em wide with 0.2em gutter.</p>
+            <p>This grid reduces the gutter between the blocks to just a few pixels. It enables you to create tiles as popularised by Windows 8 Modern UI.</p>
+            <p>To use this grid, simply add the additional class <code>tiles</code> to the row.</p>
           </section>
+          
+        </div>
+        <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
+          
+          <section>
+            <h4>Dimensions</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="row" colspan="2">Font size</th>
+                  <th scope="col">0.9375em<br />15px</th>
+                  <th scope="col">1.25em<br />20px</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Column</th>
+                  <td>5.3em</td>
+                  <td>79.5px</td>
+                  <td>106px</td>
+                </tr>
+                <tr>
+                  <th scope="row">Gutter</th>
+                  <td>0.2em</td>
+                  <td>3px</td>
+                  <td>4px</td>
+                </tr>
+                <tr>
+                  <th scope="row">12-column row</th>
+                  <td>65.8em</td>
+                  <td>987px</td>
+                  <td>1316px</td>
+                </tr>
+                <tr>
+                  <th scope="row">9-column row</th>
+                  <td>49.3em</td>
+                  <td>739.5px</td>
+                  <td>986px</td>
+                </tr>
+                <tr>
+                  <th scope="row">6-column row</th>
+                  <td>32.8em</td>
+                  <td>492px</td>
+                  <td>656px</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+            
+        </div>
+        <div class="span6">
+          
+          <h4>Live Example</h4>
           
         </div>
       </div>
@@ -331,7 +456,82 @@
       
       <div class="row">
         <div class="span9">
-          <h2>Typography</h2>
+          
+          <h3>HTML Structure</h3>
+          
+        </div>
+        <div class="span6 offset1">
+          
+          <section>
+            <h4>Basic Classes</h4>
+            
+            <p>Uxaria's grid system uses the same classes as Bootstrap:</p>
+            <pre class="prettyprint lang-html">
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;span9&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            
+            <p>You may nest columns within another:</p>
+            <pre class="prettyprint lang-html">
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;span9&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;span6&quot;&gt;...&lt;/div&gt;
+        &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            
+            <p>It's also simple to offset a container by one or more grid columns:</p>
+            <pre class="prettyprint lang-html">
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;span6 <mark>offset1</mark>&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            
+          </section>
+          
+        </div>
+        <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
+          
+          <section>
+            <h4>Alternative Grids</h4>
+            <p>Add an additional class to change the whitespace of a grid row:</p>
+            <pre class="prettyprint lang-html">&lt;div class=&quot;row <mark>alternative</mark>&quot;&gt;
+  ...
+&lt;/div&gt;</pre>
+            <p>or:</p>
+            <pre class="prettyprint lang-html">&lt;div class=&quot;row <mark>tiles</mark>&quot;&gt;
+  ...
+&lt;/div&gt;</pre>
+          </section>
+          
+          <section>
+            <h4>Responsive Helper Classes</h4>
+            <p>To control the layout of narrower grid systems with 6 or 9 columns for phones and tablets, use <code>span*-phone</code>, <code>span*-tablet</code>, <code>offset*-phone</code> and <code>offset*-tablet</code> helper classes:</p>
+            <pre class="prettyprint lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;span3 <mark>span2-phone</mark>&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;span9 <mark>span6-tablet span4-phone</mark>&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+            <p>To undo an offset, add <code>offset0-phone</code> or <code>offset0-tablet</code>.</p>
+          </section>
+          
+        </div>
+      </div>
+      
+      <hr />
+      
+      <div class="row">
+        <div class="span9">
+          <h2 id="typo">Typography</h2>
         </div>
       </div>
       
@@ -354,7 +554,7 @@
           
         </div>
       </div>
-    </div>
+    </article>
     
     <aside id="complementary" role="complementary">
     
@@ -368,6 +568,7 @@
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/lib/prettify/prettify.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
     

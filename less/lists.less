@@ -16,6 +16,7 @@ dl {
   
   dt {
     font-weight: @fontWeightBold;
+    color: @grayDark;
   }
   
   dd {
@@ -86,7 +87,7 @@ ol.inline {
   
   dt {
     float: left;
-    width: @horizontalComponentOffset - 20;
+    width: (@horizontalComponentOffset - @halfGridGutterWidth);
     clear: left;
     text-align: right;
     .text-overflow();

@@ -628,9 +628,19 @@
     .span (@columns) {
       width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
     }
+    
+    .offsetX (@index) when (@index >= 0) {
+      .offset@{index}-tablet { .offset(@index); }
+      .offsetX(@index - 1);
+    }
 
-    // generate .spanX
+    .offset (@columns) {
+      margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
+    }
+
+    // generate .spanX and .offsetX
     .spanX (@tabletGridColumns);
+    .offsetX (@tabletGridColumns);
 
   }
   
@@ -645,9 +655,19 @@
     .span (@columns) {
       width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
     }
+    
+    .offsetX (@index) when (@index >= 0) {
+      .offset@{index}-phone { .offset(@index); }
+      .offsetX(@index - 1);
+    }
 
-    // generate .spanX
+    .offset (@columns) {
+      margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
+    }
+
+    // generate .spanX and .offsetX
     .spanX (@phoneGridColumns);
+    .offsetX (@phoneGridColumns);
 
   }
   

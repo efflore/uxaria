@@ -48,7 +48,7 @@
 // -------------------------
 @sansFontFamily:        "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@monoFontFamily:        Consolas, Monaco, "Courier New", monospace;
 
 @baseFontSize:          0.9375em; // 15px
 @baseFontFamily:        @sansFontFamily;
@@ -62,7 +62,7 @@
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    @fontWeightBold; // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsColor:         @grayDark; // empty to use BS default, @textColor
 
 @paragraphMargin:       (@baseLineHeight * 0.5em);
 
@@ -176,7 +176,7 @@
 
 // Horizontal forms & lists
 // -------------------------
-@horizontalComponentOffset:       180px;
+@horizontalComponentOffset:       (2 * @gridColumnWidth + 2 * @gridGutterWidth);
 
 
 // Wells

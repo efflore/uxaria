@@ -22,3 +22,8 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// prettify code
+$(document).ready(function(){
+  prettyPrint();
+});
