@@ -29,20 +29,145 @@
   
   <body>
     
-    <header id="banner" role="banner">
-    
+    <header id="header" role="banner">
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h1>Uxaria <small>Web Interface Toolkit</small></h1>
+          </div>
+        </div>
+      </div>
     </header>
     
     <article id="main" class="container" role="main">
-    
+      
       <div class="row">
         <div class="span9">
           
-          <h2>Grid</h2>
+          <h2>Overview</h2>
+          
+          <section class="lead">
+            <p>Uxaria is a web interface toolkit based on <a href="http://twitter.github.io/bootstrap/" target="blank">Twitter Bootstrap</a>. It shares the naming conventions for classes and variables with Bootstrap, but differs in design and implementation.</p>
+            <p>Uxaria provides a modular set of sane default styles for most common elements in complex web designs. Responsive design is at the core of this project, with the flexibilty for adaptions that make sense in mind.</p>
+          </section>
+        
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="span9">
+          
+          <h2 id="basics">Basic Styles</h2>
+          
+        </div>
+        <div class="span6 offset1">
           
           <section>
-            <h3>Regular Grid</h3>
-            <p>12 columns, each 4em wide with 1.4em gutter.</p>
+            <h3>Font</h3>
+            <p>The default <strong>font size</strong> is set to 0.9375em – corresponding to <strong>15px</strong> in most browsers. This font size is used for mobile phones up to 568px, for tablets in portrait orientation with 768px device width and for tablets and small desktops with 1024px device width.</p>
+            <p>For larger screens the font size is adjusted to fill the device or browser window width up to a maximum of 1.25em (corresponding to 20px) on a 1366px wide screen.</p>
+            <p>The default <strong>line height</strong> is <strong>1.4</strong> - a proven value for good readability for lines with approximately 80 characters per line. The <a href="#grid">grid system</a> is optimized for this line length at 6 grid columns.</p>
+            <p>Uxaria includes the marvelous <a href="http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1959" target="_blank">Source Sans Pro</a> <strong>font family</strong> by Adobe via Google Fonts. This clean, web-optimzed and open source sans-serif font makes a good default and comes in light, regular and bold font weights.</p>
+          </section>
+        
+        </div>
+        <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
+          
+          <section>
+            <h3>Color</h3>
+            <p>Uxaria sets the following default colors:</p>
+            <ul>
+              <li>Background: #fff</li>
+              <li>Text: #222</li>
+              <li>Links: #3a6bd3, hover: #0f51b3</li>
+              <li>Selection: #afe3fd</li>
+            </ul>
+          </section>
+          
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="span9">
+          
+          <h2 id="#grid">Grid</h2>
+          
+          <h3>Regular Grid</h3>
+          <section class="lead">
+            <p>By default Uxaria uses a <strong>12-column grid system</strong>. Grid dimensions are in <code>em</code>, making them scale proportionally with the base font size. The default grid gutter is 1.4em - equal to the line height by design.</p>
+          </section>
+          
+        </div>
+        <div class="span6 offset1">
+            
+          <section>
+            <h4>Responsive Grid</h4>
+            <p>Instead of shrinking / widening column and gutter widths in responsive design (like Bootstrap and most other frameworks do), Uxaria reduces the number of colums available. On tablet in portrait orientation each row consists of 9 grid columns. This is further reduced to 6 grid colmns on mobile phones in landscape orientation. For mobile phones in portrait orientation we finally stack the columns vertically.</p>
+            <p>The layout breakpoints are:</p>
+            <dl>
+              <dt>Phone portrait: up to 511px</dt>
+              <dd>all columns stacked vertically</dd>
+              <dt>Phone landscape: from 512px to 749px</dt>
+              <dd>6 columns</dd>
+              <dt>Tablet portrait: from 750px to 1023px</dt>
+              <dd>9 columns</dd>
+              <dt>Tablet landscape and desktop: 1024px and up</dt>
+              <dd>12 columns</dd>
+            </dl>
+            <p>The motivation behind this design decision is to give you as a web designer fine-grained control over responsive layout mechanics while keeping all proportions within content elements as constant as possible on all devices. Assign the helper classes <code>span*-phone</code> and <code>span*-tablet</code> to rearrange elements for smaller screens.</p>
+          </section>
+            
+        </div>
+        <div class="span4 span6-tablet span6-phone offset1 offset0-phone">
+            
+          <section>
+            <h4>Dimensions</h4>
+            <p>With the minimum and maximum font sizes, all grid dimensions evalute to integer pixel values, making near pixel-perfect design with relative units possible.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="row">Font size</th>
+                  <th scope="col">0.9375em<br />15px</th>
+                  <th scope="col">1.25em<br />20px</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Column width: 4em</th>
+                  <td>60px</td>
+                  <td>80px</td>
+                </tr>
+                <tr>
+                  <th scope="row">Gutter width: 1.4em</th>
+                  <td>21px</td>
+                  <td>28px</td>
+                </tr>
+                <tr>
+                  <th scope="row">12-col row width: 63.4em</th>
+                  <td>951px</td>
+                  <td>1268px</td>
+                </tr>
+                <tr>
+                  <th scope="row">9-col row width: 47.2em</th>
+                  <td>708px</td>
+                  <td>944px</td>
+                </tr>
+                <tr>
+                  <th scope="row">6-col row width: 31em</th>
+                  <td>465px</td>
+                  <td>620px</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+            
+        </div>
+        <div class="span6">
+          
+          <section>
+            
+            <h4>Live Example</h4>
+            
           </section>
           
         </div>
@@ -86,8 +211,8 @@
         </div>
         <div class="span4 span9-tablet span6-phone">
           <div class="row">
-            <div class="span4 span3-phone">4</div>
-            <div class="span4 span5-tablet span3-phone">4</div>
+            <div class="span4 span3-tablet span2-phone">4</div>
+            <div class="span4 span6-tablet">4</div>
           </div>
         </div>
       </div>
@@ -235,8 +360,10 @@
     
     </aside>
     
-    <footer id="contentinfo" role="contentinfo">
-    
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <p>© 2013 Esther Brunner</p>
+      </div>
     </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

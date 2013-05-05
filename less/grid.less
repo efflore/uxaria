@@ -9,13 +9,6 @@
   padding: 0 @gridGutterWidth;
 }
 
-// Fluid layouts (left aligned, with sidebar, min- & max-width content)
-.container-fluid {
-  padding-right: @gridGutterWidth;
-  padding-left: @gridGutterWidth;
-  .clearfix();
-}
-
 
 //
 // Grid system
@@ -35,12 +28,10 @@
 }
 
 // Reset utility classes due to specificity
-[class*="span"].hide,
-.row-fluid [class*="span"].hide {
+[class*="span"].hide {
   display: none;
 }
 
-[class*="span"].pull-right,
-.row-fluid [class*="span"].pull-right {
+[class*="span"].pull-right {
   float: right;
 }

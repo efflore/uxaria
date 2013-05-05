@@ -1,10 +1,30 @@
-// phone
-@media screen and (max-width: 568px) { body { font-size: 0.9375em; } } // 15px - most phones portrait and landscape
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+  width: device-width;
+}
+
+//
+// Phone
+// 15px default - most phones portrait and landscape
 @media screen and (min-width: 569px) and (max-width: 599px) { body { font-size: 1em; } } // 16px
 @media screen and (min-width: 600px) and (max-width: 639px) { body { font-size: 1.0625em; } } // 17px
 @media screen and (min-width: 640px) and (max-width: 679px) { body { font-size: 1.125em; } } // 18px
 @media screen and (min-width: 680px) and (max-width: 719px) { body { font-size: 1.1875em; } } // 19px
 @media screen and (min-width: 720px) and (max-width: 749px) { body { font-size: 1.25em; } } // 20px
+
+@media screen and (max-width: 749px){
+  
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  // Hide
+  .hidden-phone      { display: none !important; }
+  
+}
 
 @media screen and (max-width: 511px){
 
@@ -13,10 +33,6 @@
     padding: 0 @gridGutterWidth;
   }
   
-  // Fluid rows
-  .row-fluid {
-    width: 100%;
-  }
   // Undo negative margin on rows and thumbnails
   .row,
   .thumbnails {
@@ -36,7 +52,6 @@
   // Make all grid-sized elements block level again
   [class*="span"],
   .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
-  .row-fluid [class*="span"],
   .row.alternative [class*="span"],
   .row.tiles [class*="span"] {
     float: none;
@@ -59,14 +74,10 @@
   }
   
   .span12,
-  .row-fluid .span12,
-  .row.alternative .span12 {
+  .row.alternative .span12,
+  .row.tiles .span12 {
     width: 100%;
     .box-sizing(border-box);
-  }
-  
-  .row-fluid [class*="offset"]:first-child {
-    margin-left: 0;
   }
 
 }
@@ -132,8 +143,9 @@
 }
 
 
-// tablet
-@media screen and (min-width: 750px) and (max-width: 799px) { body { font-size: 0.9375em; } } // 15px - iPad portrait
+//
+// Tablet
+// 15px default - iPad portrait
 @media screen and (min-width: 800px) and (max-width: 849px) { body { font-size: 1em; } } // 16px
 @media screen and (min-width: 850px) and (max-width: 899px) { body { font-size: 1.0625em; } } // 17px
 @media screen and (min-width: 900px) and (max-width: 949px) { body { font-size: 1.125em; } } // 18px
@@ -141,6 +153,14 @@
 @media screen and (min-width: 1000px) and (max-width: 1023px) { body { font-size: 1.25em; } } // 20px
 
 @media screen and (min-width: 750px) and (max-width: 1023px) {
+
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
   
   .container {
     width: @tabletGridRowWidth;
@@ -191,12 +211,15 @@
 }
 
 
-// desktop
-@media screen and (min-width: 1024px) and (max-width: 1089px) { body { font-size: 0.9375em; } } // 15px - iPad landscape
+//
+// Desktop
+// 15px default - iPad landscape
 @media screen and (min-width: 1090px) and (max-width: 1159px) { body { font-size: 1em; } } // 16px
 @media screen and (min-width: 1160px) and (max-width: 1229px) { body { font-size: 1.0625em; } } // 17px
 @media screen and (min-width: 1230px) and (max-width: 1299px) { body { font-size: 1.125em; } } // 18px
 @media screen and (min-width: 1300px) and (max-width: 1365px) { body { font-size: 1.1875em; } } // 19px
+@media screen and (min-width: 1366px) { body { font-size: 1.25em; } } // 20px
+
 
 /* Style adjustments for high resolution devices */
 @media print,
