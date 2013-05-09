@@ -1,0 +1,69 @@
+//
+// Search Layout
+// --------------------------------------------------
+
+#search {
+  position: fixed;
+  top: 0;
+  right: -(8 * @gridColumnWidth + 9 * @gridGutterWidth);
+  .opacity(20);
+  z-index: @zindexFixedNavbar;
+}
+
+body.search-open {
+  overflow-x: hidden;
+  
+  #search {
+    right: 0;
+    .opacity(100);
+  }
+  
+  #page-overlay {
+    left: auto;
+    right: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+  }
+  
+  #wrapper,
+  #header .container,
+  #footer .container {
+    position: relative;
+    left: auto;
+    right: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+    margin-right: 0;
+  }
+  
+}
+
+.csstransforms3d.csstransitions {
+
+  #search {
+    display: block;
+    .scale(0, 0.9);
+    .transition(all 200ms ease);
+  }
+  
+  #wrapper,
+  #header .container,
+  #footer .container {
+    .translate(0, 0);
+    .transition(all 200ms ease);
+  }
+  
+  body.search-open {
+    
+    #search {
+      .scale(1, 1);
+      .transition(all 200ms ease);
+    }
+    
+    #wrapper,
+    #header .container,
+    #footer .container {
+      right: 0;
+      .translate(-(8 * @gridColumnWidth + 9 * @gridGutterWidth), 0);
+      .transition(all 200ms ease);
+    }
+    
+  }
+  
+}

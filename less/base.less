@@ -64,6 +64,7 @@ body {
   margin: 0; // Address margins handled incorrectly in IE 6/7.
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
+  overflow-x: hidden;
 }
 
 /*
@@ -483,6 +484,7 @@ address {
 
 }
 
+
 //
 // Utility classes
 // --------------------------------------------------
@@ -507,4 +509,32 @@ address {
 // For Affix plugin
 .affix {
   position: fixed;
+}
+
+
+//
+// Component animations
+// --------------------------------------------------
+
+
+.fade {
+  opacity: 0;
+  .transition(opacity 0.2s linear);
+  
+  &.in {
+    opacity: 1;
+  }
+  
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  .transition(height 0.2s ease);
+  
+  &.in {
+    height: auto;
+  }
+  
 }

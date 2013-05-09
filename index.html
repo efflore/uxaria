@@ -27,22 +27,31 @@
     <script src="js/lib/modernizr-2.6.2.min.js"></script>
   </head>
   
-  <body id="nav-open">
+  <body>
     
     <header id="header" role="banner">
-      <div class="container">
+      <div class="container collapse">
         <div class="row">
-          <div class="span3">
+          <div class="span6">
+          
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          
+          </div>
+        </div>
+      </div>
+      <div class="container navbar">
+        <div class="row">
+          <div class="span3 span2-tablet span1-phone">
           
             <a href="#nav" class="sidebar-toggle text-left" role="button" aria-controls="nav">Navigation</a>
           
           </div>
-          <div class="span6">
+          <div class="span6 span5-tablet span4-phone">
             
-            <a href="#home" class="text-center"><h1>Uxaria <small>Web Interface Toolkit</small></h1></a>
+            <a href="#home" class="text-center"><h1>Uxaria <small>Web UI Toolkit</small></h1></a>
             
           </div>
-          <div class="span3">
+          <div class="span3 span2-tablet span1-phone">
             
             <a href="#search" class="sidebar-toggle text-right" role="button" aria-controls="search">Search</a>
             
@@ -50,6 +59,7 @@
         </div>
       </div>
     </header>
+    <div class="spacer"></div>
     
     <nav id="nav" class="sidebar">
       
@@ -735,17 +745,38 @@
       
       <div id="next-page" class="hide"></div>
       
-      <div id="page-overlay"></div>
     </div>
+    <div id="page-overlay"></div>
     
     <footer id="footer" role="contentinfo">
-      <div class="container">
-        <p>© 2013 Esther Brunner</p>
+      <div class="container navbar">
+        <div class="row">
+          <div class="span4 span3-tablet span2-phone">
+            
+            <a href="#page/prev" class="paging-prev text-left" role="button" aria-controls="wrapper">Previous Page</a>
+            
+          </div>
+          <div class="span4 span3-tablet span2-phone">
+            
+            <p class="text-center">Indicator</p>
+            
+          </div>
+          <div class="span4 span3-tablet span2-phone">
+            
+            <a href="#page/next" class="paging-next text-right" role="button" aria-controls="wrapper">Next Page</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container collapse">
+        <p><small>© 2013 Esther Brunner</small></p>
       </div>
     </footer>
+    <div class="spacer"></div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/lib/bootstrap/bootstrap-affix.js"></script>
     <script src="js/lib/prettify/prettify.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
