@@ -2,11 +2,24 @@
 // Layouts
 // --------------------------------------------------
 
+#wrapper {
+  margin-top: (@navbarHeight + @halfGridGutterWidth);
+  background: @pageBackground;
+  .box-shadow(0 0 @halfGridGutterWidth rgba(0, 0, 0, 5%));
+}
+
 
 // Container (centered, fixed-width layouts)
 .container {
   .container-fixed();
   padding: 0 @gridGutterWidth;
+}
+
+// Sidebar container
+.sidebar {
+  #grid > .core > .span(8);
+  padding: 0 @gridGutterWidth;
+  display: none;
 }
 
 

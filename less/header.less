@@ -1,0 +1,50 @@
+//
+// Fixed Header
+// --------------------------------------------------
+
+#header {
+  width: 100%;
+  height: @navbarHeight;
+  #gradient > .vertical(#f5f5f5, @grayLighter);
+  .box-shadow(0 0 @halfGridGutterWidth rgba(0, 0, 0, 10%));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: @zindexFixedNavbar;
+  
+  a {
+    display: block;
+    margin: @quarterGridGutterWidth 0;
+    padding: @quarterGridGutterWidth @gridGutterWidth;
+    height: (@navbarHeight - @gridGutterWidth);
+    line-height: (@navbarHeight - @gridGutterWidth);
+    .border-radius(@borderRadiusLarge);
+  
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 2%);
+    }
+    
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 100%;
+    
+    small {
+      font-size: 80%;
+    }
+    
+  }
+  
+}
+
+body.navbars-hidden {
+  
+  #header {
+    display: none;
+  }
+  
+}

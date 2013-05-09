@@ -1,0 +1,121 @@
+//
+// Nav Layout
+// --------------------------------------------------
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: -(8 * @gridColumnWidth + 9 * @gridGutterWidth);
+  .opacity(20);
+  z-index: @zindexFixedNavbar;
+}
+
+#page-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: -(@navbarHeight + @gridGutterWidth) 0;
+  padding: (@navbarHeight + @gridGutterWidth) 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .opacity(0);
+  .transition(opacity 200ms ease);
+}
+
+body.nav-open {
+  overflow-x: hidden;
+  
+  #nav {
+    left: 0;
+    .opacity(100);
+  }
+  
+  #wrapper {
+    position: relative;
+    left: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+    margin-left: 0;
+  }
+  
+  #header,
+  #footer {
+    .container {
+      position: relative;
+      left: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+      margin-left: 0;
+    }
+  }
+  
+  #page-overlay {
+    display: block;
+    background-color: @black;
+    .opacity(60);
+    .transition(opacity 200ms ease);
+  }
+  
+}
+
+.csstransforms3d.csstransitions {
+
+  #nav {
+    display: block;
+    .scale(0, 0.9);
+    .backface-visibility(hidden);
+    .transition(all 200ms ease);
+  }
+  
+  #wrapper {
+    .translate3d(0, 0, 0);
+    .backface-visibility(hidden);
+    .transition(all 200ms ease);
+  }
+  
+  body.nav-open {
+    
+    #nav {
+      .scale(1, 1);
+      .transition(all 200ms ease);
+    }
+    
+    #wrapper {
+      left: 0;
+      .translate3d((8 * @gridColumnWidth + 9 * @gridGutterWidth), 0, 0);
+      .transition(all 200ms ease);
+    }
+    
+    #header,
+    #footer {
+      .container {
+        left: 0;
+        .translate3d((8 * @gridColumnWidth + 9 * @gridGutterWidth), 0, 0);
+        .transition(all 200ms ease);
+      }
+    }
+    
+  }
+  
+}
+
+#nav-back {
+  position: relative;
+  z-index: @zindexFixedNavbar;
+  height: @navbarHeight;
+  
+  a {
+    margin: @quarterGridGutterWidth 0;
+    padding: @quarterGridGutterWidth @gridGutterWidth;
+    height: (@navbarHeight - @gridGutterWidth);
+    line-height: (@navbarHeight - @gridGutterWidth);
+    display: block;
+    .border-radius(@borderRadiusLarge);
+    
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 2%);
+    }
+    
+  }
+  
+}
