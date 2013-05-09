@@ -5,7 +5,7 @@
 #nav {
   position: fixed;
   top: 0;
-  left: -(8 * @gridColumnWidth + 9 * @gridGutterWidth);
+  left: -@desktopSidebarWidth;
   .opacity(20);
   z-index: @zindexFixedNavbar;
 }
@@ -19,14 +19,14 @@ body.nav-open {
   }
   
   #page-overlay {
-    left: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+    left: @desktopSidebarWidth;
   }
   
   #wrapper,
   #header .container,
   #footer .container {
     position: relative;
-    left: (8 * @gridColumnWidth + 9 * @gridGutterWidth);
+    left: @desktopSidebarWidth;
     margin-left: 0;
   }
   
@@ -58,7 +58,7 @@ body.nav-open {
     #header .container,
     #footer .container {
       left: 0;
-      .translate((8 * @gridColumnWidth + 9 * @gridGutterWidth), 0);
+      .translate(@desktopSidebarWidth, 0);
       .transition(all 200ms ease);
     }
     

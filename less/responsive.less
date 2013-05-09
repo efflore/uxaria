@@ -33,6 +33,12 @@
     padding: 0 @gridGutterWidth;
   }
   
+  .sidebar {
+    #grid > .phone > .span(3);
+    padding: 0 @gridGutterWidth;
+    display: none;
+  }
+  
   // Undo negative margin on rows and thumbnails
   .row,
   .thumbnails {
@@ -79,6 +85,54 @@
     width: 100%;
     .box-sizing(border-box);
   }
+  
+  // Navigation sidebar
+  #nav {
+    left: -@phonePSidebarWidth;
+  }
+  
+  body.nav-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      left: @phonePSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.nav-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(@phonePSidebarWidth, 0);
+      }
+    }
+  }
+  
+  // Search sidebar
+  #search {
+    right: -@phonePSidebarWidth;
+  }
+  
+  body.search-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      right: @phonePSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.search-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(-@phonePSidebarWidth, 0);
+      }
+    }
+  }
 
 }
 
@@ -86,6 +140,12 @@
 
   .container {
     width: @phoneGridRowWidth;
+  }
+  
+  .sidebar {
+    #grid > .phone > .span(4);
+    padding: 0 @gridGutterWidth;
+    display: none;
   }
   
   .span6,
@@ -139,6 +199,54 @@
   .row.tiles {
     #grid > .phone(@tilesGridColumnWidth, @tilesGridGutterWidth);
   }
+  
+  // Navigation sidebar
+  #nav {
+    left: -@phoneLSidebarWidth;
+  }
+  
+  body.nav-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      left: @phoneLSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.nav-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(@phoneLSidebarWidth, 0);
+      }
+    }
+  }
+  
+  // Search sidebar
+  #search {
+    right: -@phoneLSidebarWidth;
+  }
+  
+  body.search-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      right: @phoneLSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.search-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(-@phoneLSidebarWidth, 0);
+      }
+    }
+  }
 
 }
 
@@ -164,6 +272,12 @@
   
   .container {
     width: @tabletGridRowWidth;
+  }
+  
+  .sidebar {
+    #grid > .tablet > .span(6);
+    padding: 0 @gridGutterWidth;
+    display: none;
   }
   
   .span9,
@@ -206,6 +320,54 @@
   
   .row.tiles {
     #grid > .tablet(@tilesGridColumnWidth, @tilesGridGutterWidth);
+  }
+  
+  // Navigation sidebar
+  #nav {
+    left: -@tabletSidebarWidth;
+  }
+  
+  body.nav-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      left: @tabletSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.nav-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(@tabletSidebarWidth, 0);
+      }
+    }
+  }
+  
+  // Search sidebar
+  #search {
+    right: -@tabletSidebarWidth;
+  }
+  
+  body.search-open {
+    #page-overlay,
+    #wrapper,
+    #header .container,
+    #footer .container {
+      right: @tabletSidebarWidth;
+    }
+  }
+  
+  .csstransforms3d.csstransitions {
+    body.search-open {
+      #wrapper,
+      #header .container,
+      #footer .container {
+        .translate(-@tabletSidebarWidth, 0);
+      }
+    }
   }
 
 }

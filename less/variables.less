@@ -310,3 +310,15 @@
 @phoneGridColumns:        6;
 @tabletGridRowWidth:      (@tabletGridColumns * @gridColumnWidth) + (@gridGutterWidth * (@tabletGridColumns - 1));
 @phoneGridRowWidth:       (@phoneGridColumns * @gridColumnWidth) + (@gridGutterWidth * (@phoneGridColumns - 1));
+
+
+// Sidebars
+// -------------------------
+@desktopSidebarColumns:   8;
+@tabletSidebarColumns:    6;
+@phoneLSidebarColumns:    4; // Landscape
+@phonePSidebarColumns:    3; // Portrait
+@desktopSidebarWidth:     (@desktopSidebarColumns * @gridColumnWidth) + (@gridGutterWidth * (@desktopSidebarColumns + 1));
+@tabletSidebarWidth:      (@tabletSidebarColumns * @gridColumnWidth) + (@gridGutterWidth * (@tabletSidebarColumns + 1));
+@phoneLSidebarWidth:      (@phoneLSidebarColumns * @gridColumnWidth) + (@gridGutterWidth * (@phoneLSidebarColumns + 1));
+@phonePSidebarWidth:      (@phonePSidebarColumns * @gridColumnWidth) + (@gridGutterWidth * (@phonePSidebarColumns + 1));
