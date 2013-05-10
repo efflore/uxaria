@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: -@desktopSidebarWidth;
-  .opacity(20);
+  .opacity(60);
   z-index: @zindexFixedNavbar;
   height: 100%;
   
@@ -56,7 +56,7 @@ body.nav-open {
   
 }
 
-.csstransforms3d.csstransitions {
+.csstransforms.csstransitions {
 
   #nav {
     display: block;
@@ -75,7 +75,6 @@ body.nav-open {
     
     #nav {
       .scale(1, 1);
-      .transition(all 200ms ease);
     }
     
     #wrapper,
@@ -83,7 +82,6 @@ body.nav-open {
     #footer .container {
       left: 0;
       .translate(@desktopSidebarWidth, 0);
-      .transition(all 200ms ease);
     }
     
   }

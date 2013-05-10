@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   right: -@desktopSidebarWidth;
-  .opacity(20);
+  .opacity(60);
   z-index: @zindexFixedNavbar;
 }
 
@@ -34,7 +34,7 @@ body.search-open {
   
 }
 
-.csstransforms3d.csstransitions {
+.csstransforms.csstransitions {
 
   #search {
     display: block;
@@ -53,7 +53,6 @@ body.search-open {
     
     #search {
       .scale(1, 1);
-      .transition(all 200ms ease);
     }
     
     #wrapper,
@@ -61,7 +60,6 @@ body.search-open {
     #footer .container {
       right: 0;
       .translate(-@desktopSidebarWidth, 0);
-      .transition(all 200ms ease);
     }
     
   }
