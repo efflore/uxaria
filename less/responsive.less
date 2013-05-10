@@ -89,6 +89,25 @@
   // Navigation sidebar
   #nav {
     left: -@phonePSidebarWidth;
+    
+    li {
+      width: (3 * @gridColumnWidth);
+    }
+    
+    ul.subitems-menu {
+      left: (3 * @gridColumnWidth + 3 * @gridGutterWidth);
+    }
+    
+    .nav-list {
+      margin-left: -(3 * @gridColumnWidth + 3 * @gridGutterWidth);
+      
+      &.depth1 { margin-left: -(3 * @gridColumnWidth + 3 * @gridGutterWidth); }
+      &.depth2 { margin-left: -(6 * @gridColumnWidth + 6 * @gridGutterWidth); }
+      &.depth3 { margin-left: -(9 * @gridColumnWidth + 9 * @gridGutterWidth); }
+      &.depth4 { margin-left: -(12 * @gridColumnWidth + 12 * @gridGutterWidth); }
+      &.depth5 { margin-left: -(15 * @gridColumnWidth + 15 * @gridGutterWidth); }
+    }
+    
   }
   
   body.nav-open {
@@ -325,6 +344,23 @@
   // Navigation sidebar
   #nav {
     left: -@tabletSidebarWidth;
+    
+    li {
+      width: (3 * @gridColumnWidth);
+    }
+    
+    ul.subitems-menu {
+      left: (3 * @gridColumnWidth + 3 * @gridGutterWidth);
+    }
+    
+    .nav-list {
+      &.depth1 { margin-left: -(3 * @gridColumnWidth + 3 * @gridGutterWidth); }
+      &.depth2 { margin-left: -(6 * @gridColumnWidth + 6 * @gridGutterWidth); }
+      &.depth3 { margin-left: -(9 * @gridColumnWidth + 9 * @gridGutterWidth); }
+      &.depth4 { margin-left: -(12 * @gridColumnWidth + 12 * @gridGutterWidth); }
+      &.depth5 { margin-left: -(15 * @gridColumnWidth + 15 * @gridGutterWidth); }
+    }
+    
   }
   
   body.nav-open {
