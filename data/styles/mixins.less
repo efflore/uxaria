@@ -582,13 +582,13 @@
   .core (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index} { .span(@index); }
+      (~".span@{index}") { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}
 
     .offsetX (@index) when (@index > 0) {
-      .offset@{index} { .offset(@index); }
+      (~".offset@{index}") { .offset(@index); }
       .offsetX(@index - 1);
     }
     .offsetX (0) {}
@@ -627,7 +627,7 @@
   .tablet (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index}-tablet { .span(@index); }
+      (~".span@{index}-tablet") { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}
@@ -637,7 +637,7 @@
     }
     
     .offsetX (@index) when (@index >= 0) {
-      .offset@{index}-tablet { .offset(@index); }
+      (~".offset@{index}-tablet") { .offset(@index); }
       .offsetX(@index - 1);
     }
 
@@ -654,7 +654,7 @@
   .phone (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index}-phone { .span(@index); }
+      (~".span@{index}-phone") { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}
@@ -664,7 +664,7 @@
     }
     
     .offsetX (@index) when (@index >= 0) {
-      .offset@{index}-phone { .offset(@index); }
+      (~".offset@{index}-phone") { .offset(@index); }
       .offsetX(@index - 1);
     }
 
@@ -681,7 +681,7 @@
   .input(@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index} { .span(@index); }
+      (~"input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index}") { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}

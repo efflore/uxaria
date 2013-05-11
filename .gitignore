@@ -1,3 +1,10 @@
+# Rewriting rules
+web/.htaccess
+
+# Composer
+composer.lock
+composer.phar
+
 # Bootstrap
 app/bootstrap*
 
