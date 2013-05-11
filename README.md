@@ -23,7 +23,7 @@ Setup
     date.timezone = UTC
     ```
     
-3. You Apache configuration should include something like this:
+3. Your Apache configuration should include something like this:
 
     ```
     <Directory "/Users/~**user**/Sites/">
@@ -46,7 +46,7 @@ Setup
     ```
     <IfModule mod_rewrite.c>
        RewriteEngine On
-       RewriteBase /~**user**/web-toolkit/web
+       # RewriteBase /~**user**/uxaria/web
        RewriteCond %{REQUEST_FILENAME} !-f
        RewriteCond %{REQUEST_FILENAME} !-d
        RewriteRule ^(.*)$ index.php [QSA,L]
