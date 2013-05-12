@@ -1,5 +1,7 @@
 {% extends 'layouts/page.html' %}
 
+{% import 'macros/docs.html' as docs %}
+
 {% block title %}Basic Styles{% endblock title %}
 
 {% block lead %}
@@ -25,13 +27,13 @@
         <p>Uxaria sets the following default colors:</p>
         <dl>
           <dt>Background</dt>
-          <dd><span class="color-swatch" style="background: #fff">&nbsp;</span> <code>#fff</code></dd>
+          <dd>{{ docs.color('#fff') }}</dd>
           <dt>Text</dt>
-          <dd><span class="color-swatch" style="background: #222">&nbsp;</span> <code>#222</code><br /><span class="color-swatch" style="background: #444">&nbsp;</span> <code>#444</code> for headings and bold</dd>
+          <dd>{{ docs.color('#222') }}<br />{{ docs.color('#444') }} for headings and bold</dd>
           <dt>Links</dt>
-          <dd><span class="color-swatch" style="background: #3a6bd3">&nbsp;</span> <code>#3a6bd3</code><br /><span class="color-swatch" style="background: #0f51b3">&nbsp;</span> <code>#0f51b3</code> on mouseover</dd>
+          <dd>{{ docs.color('#3a6bd3') }}<br />{{ docs.color('#0f51b3') }} on mouseover</dd>
           <dt>Selection</dt>
-          <dd><span class="color-swatch" style="background: #bae6ff">&nbsp;</span> <code>#bae6ff</code></dd>
+          <dd>{{ docs.color('#bae6ff') }}</dd>
         </dl>
       </section>
       

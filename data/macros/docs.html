@@ -1,0 +1,11 @@
+{% macro color(code) %}
+  <span class="color-swatch" style="background: {{code}};">&nbsp;</span> <code>{{code}}</code>
+{% endmacro %}
+
+{% macro codeblock(code, lang = 'html', autoescape = true) %}
+  {% if autoescape %}
+    <pre class="prettyprint lang-{{lang}}">{% autoescape %}{{ code }}{% endautoescape %}</pre>
+  {% else %}
+    <pre class="prettyprint lang-{{lang}}">{% autoescape false %}{{ code }}{% endautoescape %}</pre>
+  {% endif %}
+{% endmacro %}

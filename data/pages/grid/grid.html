@@ -1,5 +1,7 @@
 {% extends 'layouts/page.html' %}
 
+{% import 'macros/docs.html' as docs %}
+
 {% block title %}Grid{% endblock title %}
 
 {% block lead %}
@@ -402,36 +404,33 @@
         <h3>Basic Classes</h3>
         
         <p>Uxaria's grid system uses the same classes as Bootstrap:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;container&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
-    &lt;div class=&quot;span9&quot;&gt;...&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+        {{ docs.codeblock('<div class="container">
+  <div class="row">
+    <div class="span3">...</div>
+    <div class="span9">...</div>
+  </div>
+</div>') }}
         
         <p>You may nest columns within another:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;container&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
-    &lt;div class=&quot;span9&quot;&gt;
-      &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;span6&quot;&gt;...&lt;/div&gt;
-        &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+        {{ docs.codeblock('<div class="container">
+  <div class="row">
+    <div class="span3">...</div>
+    <div class="span9">
+      <div class="row">
+        <div class="span6">...</div>
+        <div class="span3">...</div>
+      </div>
+    </div>
+  </div>
+</div>') }}
         
         <p>It's also simple to offset a container by one or more grid columns:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;container&quot;&gt;
+        {{ docs.codeblock('&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;span3&quot;&gt;...&lt;/div&gt;
     &lt;div class=&quot;span6 <mark>offset1</mark>&quot;&gt;...&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;', 'html', false) }}
         
       </section>
       
@@ -441,25 +440,22 @@
       <section>
         <h3>Alternative Grids</h3>
         <p>Add an additional class to change the whitespace of a grid row:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;row <mark>alternative</mark>&quot;&gt;
+        {{ docs.codeblock('&lt;div class=&quot;row <mark>alternative</mark>&quot;&gt;
   ...
-&lt;/div&gt;</pre>
+&lt;/div&gt;', 'html', false) }}
         <p>or:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;row <mark>tiles</mark>&quot;&gt;
+        {{ docs.codeblock('&lt;div class=&quot;row <mark>tiles</mark>&quot;&gt;
   ...
-&lt;/div&gt;</pre>
+&lt;/div&gt;', 'html', false) }}
       </section>
       
       <section>
         <h3>Responsive Helper Classes</h3>
         <p>To control the layout of narrower grid systems with 6 or 9 columns for phones and tablets, use <code>span*-phone</code>, <code>span*-tablet</code>, <code>offset*-phone</code> and <code>offset*-tablet</code> helper classes:</p>
-        <pre class="prettyprint lang-html">
-&lt;div class=&quot;row&quot;&gt;
+        {{ docs.codeblock('&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;span3 <mark>span2-phone</mark>&quot;&gt;...&lt;/div&gt;
   &lt;div class=&quot;span9 <mark>span6-tablet span4-phone</mark>&quot;&gt;...&lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;', 'html', false) }}
         <p>To undo an offset, add <code>offset0-phone</code> or <code>offset0-tablet</code>.</p>
       </section>
       

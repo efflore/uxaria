@@ -1,3 +1,5 @@
+{% import 'macros/common.html' as common %}
+
 <nav id="nav" class="sidebar">
 
   <h2 class="a11y">Navigation</h1>
@@ -6,15 +8,13 @@
   </div>
   <div id="nav-slider">
     <ul class="nav nav-list">
-      <li class="active">
-        <a href="introduction">Introduction</a>
-      </li>
+      {{ common.navitem('introduction', 'Introduction') }}
       <li>
         <a href="#" class="children">Elements</a>
         <ul class="subitems-menu hide">
-          <li><a href="basic-styles">Basic Styles</a></li>
-          <li><a href="grid">Grid</a></li>
-          <li><a href="typography">Typography</a></li>
+          {{ common.navitem('basic-styles', 'Basic Styles') }}
+          {{ common.navitem('grid', 'Grid') }}
+          {{ common.navitem('typography', 'Typography') }}
         </ul>
       </li>
     </ul>

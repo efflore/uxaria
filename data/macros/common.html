@@ -1,0 +1,17 @@
+{% macro link(id, name) %}
+  {% set url = app.url_generator.generate('page', {'id': id}) %}
+  {% if url == app.request.requestUri %}
+    <a href="{{url}}" class="active">{{name}}<span class="a11y"> (active)</span></a>
+  {% else %}
+    <a href="{{url}}">{{name}}</a>
+  {% endif %}
+{% endmacro %}
+
+{% macro navitem(id, name) %}
+  {% set url = app.url_generator.generate('page', {'id': id}) %}
+  {% if url == app.request.requestUri %}
+    <li class="active"><a href="{{url}}">{{name}}<span class="a11y"> (active)</span></a></li>
+  {% else %}
+    <li><a href="{{url}}">{{name}}</a></li>
+  {% endif %}
+{% endmacro %}
