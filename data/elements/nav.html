@@ -1,5 +1,56 @@
 {% import 'macros/common.html' as common %}
 
+{% set nav = {
+  'overview':           'Overview',
+  'elements': {
+    'title':            'Elements',
+    'children': {
+      'basic-styles':   'Basic Styles',
+      'grid':           'Grid',
+      'typography':     'Typography',
+      'lists':          'Lists',
+      'tables':         'Tables',
+      'forms':          'Forms',
+      'buttons':        'Buttons',
+      'images':         'Images',
+      'icons':          'Icons'
+    }
+  },
+  'components': {
+    'title':            'Components',
+    'children': {
+      'dropdowns':      'Dropdowns',
+      'tabs':           'Tabs',
+      'navbar':         'Navbar',
+      'breadcrumbs':    'Breadcrumbs',
+      'pagination':     'Pagination',
+      'labels-badges':  'Labels & Badges',
+      'alerts':         'Alerts',
+      'progress-bars':  'Progress Bars'
+    }
+  },
+  'microformats': {
+    'title':            'Mircoformats',
+    'children': {
+      'article':        'Article',
+      'book':           'Book',
+      'event':          'Event',
+      'job':            'JobPosting',
+      'map':            'Map',
+      'movie':          'Movie',
+      'music':          'MusicRecording',
+      'offer':          'Offer',
+      'organization':   'Organization',
+      'person':         'Person',
+      'photograph':     'Photograph',
+      'place':          'Place',
+      'product':        'Product',
+      'software':       'SoftwareApplication',
+      'webpage':        'WebPage'
+    }
+  }
+} %}
+
 <nav id="nav" class="sidebar">
 
   <h2 class="a11y">Navigation</h1>
@@ -8,15 +59,7 @@
   </div>
   <div id="nav-slider">
     <ul class="nav nav-list">
-      {{ common.navitem('introduction', 'Introduction') }}
-      <li>
-        <a href="#" class="children">Elements</a>
-        <ul class="subitems-menu hide">
-          {{ common.navitem('basic-styles', 'Basic Styles') }}
-          {{ common.navitem('grid', 'Grid') }}
-          {{ common.navitem('typography', 'Typography') }}
-        </ul>
-      </li>
+      {{ common.navlist(nav) }}
     </ul>
   </div>
 

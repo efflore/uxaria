@@ -15,3 +15,20 @@
     <li><a href="{{url}}">{{name}}</a></li>
   {% endif %}
 {% endmacro %}
+
+{% macro navlist(nav) %}
+  {% for key, value in nav %}
+    {% if value is iterable and value.children is iterable %}
+      {% set url = app.url_generator.generate('page', {'id': key}) %}
+      {% if url == app.request.requestUri %}
+        <li class="active"><a href="#" class="children">{{ value.title }}<span class="a11y"> (active)</span></a><ul class="subitems-menu">
+      {% else %}
+        <li><a href="#" class="children">{{ value.title }}</a><ul class="subitems-menu hide">
+      {% endif %}
+        {{ _self.navlist(value.children) }}
+        </ul></li>
+    {% else %}
+      {{ _self.navitem(key, value) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
