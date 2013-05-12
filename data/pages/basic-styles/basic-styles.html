@@ -1,0 +1,40 @@
+{% extends 'layouts/page.html' %}
+
+{% block title %}Basic Styles{% endblock title %}
+
+{% block lead %}
+{% endblock lead %}
+
+{% block body %}
+  <div class="row alternative">
+    <div class="span6 offset1-tablet">
+      
+      <section>
+        <h2>Font</h2>
+        <p>The default <strong>font size</strong> is set to 0.9375em – corresponding to <strong>15px</strong> in most browsers. This font size is used for mobile phones up to 568px, for tablets in portrait orientation with 768px device width and for tablets and small desktops with 1024px device width.</p>
+        <p>For larger screens the font size is adjusted to fill the device or browser window width up to a maximum of 1.25em (corresponding to 20px) on a 1366px wide screen.</p>
+        <p>The default <strong>line height</strong> is <strong>1.4</strong> - a proven value for good readability for lines with approximately 80 characters per line. The <a href="#grid">grid system</a> is optimized for this line length at 6 grid columns.</p>
+        <p>Uxaria includes the marvelous <a href="http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1959" target="_blank">Source Sans Pro</a> <strong>font family</strong> by Adobe via Google Fonts. This clean, web-optimzed and open source sans-serif font makes a good default and comes in light, regular and bold font weights.</p>
+      </section>
+    
+    </div>
+    <div class="span6 offset2-tablet">
+      
+      <section>
+        <h2>Colors</h2>
+        <p>Uxaria sets the following default colors:</p>
+        <dl>
+          <dt>Background</dt>
+          <dd><span class="color-swatch" style="background: #fff">&nbsp;</span> <code>#fff</code></dd>
+          <dt>Text</dt>
+          <dd><span class="color-swatch" style="background: #222">&nbsp;</span> <code>#222</code><br /><span class="color-swatch" style="background: #444">&nbsp;</span> <code>#444</code> for headings and bold</dd>
+          <dt>Links</dt>
+          <dd><span class="color-swatch" style="background: #3a6bd3">&nbsp;</span> <code>#3a6bd3</code><br /><span class="color-swatch" style="background: #0f51b3">&nbsp;</span> <code>#0f51b3</code> on mouseover</dd>
+          <dt>Selection</dt>
+          <dd><span class="color-swatch" style="background: #bae6ff">&nbsp;</span> <code>#bae6ff</code></dd>
+        </dl>
+      </section>
+      
+    </div>
+  </div>
+{% endblock body %}

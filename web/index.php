@@ -18,7 +18,7 @@ if (!defined('CACHE_DIR')){
   define('CACHE_DIR', __DIR__.'/../cache');
 }
 
-// Load application
+// Load core components
 
 require_once VENDOR_DIR.'/autoload.php';
 
@@ -39,6 +39,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app['twig']->addExtension(new Twig_Extension_Debug());
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+// Load application
+
+require_once APP_DIR.'/main.php';
 
 // Define routes
 
@@ -64,7 +68,7 @@ $app->get('/styles/{id}.css', function($id) use ($app){
 
 // Pages
 $app->get('/{id}', function($id) use ($app){
-  $path = '/pages/'.$id.'/index.html';
+  $path = '/pages/'.$id.'/'.$id.'.html';
   if (!@file_exists(DATA_DIR.$path)){
     $app->abort(404, 'Sorry, this page does not exist.');
   }
@@ -75,7 +79,7 @@ $app->get('/{id}', function($id) use ($app){
 
 // Pages in folders
 $app->get('/{folder}/{id}', function($folder, $id) use ($app){
-  $path = '/pages/'.$folder.'/'.$id.'/index.html';
+  $path = '/pages/'.$folder.'/'.$id.'/'.$id.'.html';
   if (!@file_exists(DATA_DIR.$path)){
     $app->abort(404, 'Sorry, this page does not exist.');
   }

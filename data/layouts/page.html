@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>{{ block('title')|striptags }} · {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ block('lead')|striptags }}" />
+    {% block meta %}
+      <meta name="keywords" content="" />
+      <meta name="author" content="" />
+    {% endblock %}
+    
+    <link rel="stylesheet" href="{{ app.debug ? 'styles' : 'css' }}/style.css" />
+    {% if app.editor %}<link rel="stylesheet" type="text/css" href="js/lib/redactor/redactor.css" />{% endif %}
+    {% block page_styles %}{% endblock %}
+    
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="js/lib/modernizr-2.6.2.min.js"></script>
+  </head>
+  
+  <body>
+    
+    <header id="header" role="banner">
+      {% include 'elements/header.html' %}
+    </header>
+    <div class="spacer"></div>
+    
+    {% include 'elements/nav.html' %}
+    
+    {% include 'elements/search.html' %}
+      
+    <div id="wrapper" class="container">
+      
+      {% include 'elements/prev-page.html' %}
+      
+      <div id="current-page">
+        {% include 'elements/messages.html' %}
+    
+        <article id="main" role="main">
+          
+          {% block page_header %}
+            <header>
+              <div class="row alternative">
+                <div class="span9">
+                  <h1 id="page-title"{% if app.editor %} class="editable inline"{% endif %}>{% block title %}Untitled{% endblock %}</h1>
+                </div>
+              </div>
+              <div class="row alternative">
+                <div class="span9">
+                  <section id="page-lead" class="lead{% if app.editor %} editable{% endif %}">
+                    {% block lead %}{% endblock %}
+                  </section>
+                </div>
+              </div>
+            </header>
+          {% endblock %}
+          
+          {% block body %}{% endblock %}
+          
+          {% block page_footer %}{% endblock %}
+          
+        </article>
+        
+        <aside id="aside" role="complementary">
+          
+          {% block aside %}{% endblock %}
+          
+        </aside>
+    
+      </div>
+      
+      {% include 'elements/next-page.html' %}
+      
+    </div>
+    <div id="page-overlay"></div>
+    
+    <div id="footer">
+      {% include 'elements/paging.html' %}
+      {% include 'elements/footer.html' %}
+    </div>
+    <div class="spacer"></div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/lib/bootstrap/bootstrap-affix.js"></script>
+    <script src="js/lib/prettify/prettify.js"></script>
+    {% if app.editor %}
+      <script src="js/lib/redactor/redactor.min.js"></script>
+      <script src="js/lib/redactor/lang/de.js"></script>
+    {% endif %}
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    {% block page_scripts %}{% endblock %}
+    
+  </body>
+  
+</html>
