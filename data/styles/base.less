@@ -95,6 +95,10 @@ a {
     text-decoration: underline;
   }
   
+  &:active {
+    color: @linkColorActive;
+  }
+  
   &:focus {
     outline: thin dotted; // Address `outline` inconsistency between Chrome and other browsers.
   }
@@ -140,25 +144,17 @@ em      { font-style: italic; }
 cite    { font-style: normal; }
 
 // Utility classes
-.muted               { color: @gray; }
-a.muted:hover,
-a.muted:focus        { color: darken(@gray, 10%); }
+.text-muted               { color: @gray-dark1; }
+a.text-muted:hover,
+a.text-muted:focus        { color: @gray-dark2; }
 
-.text-warning        { color: @warningText; }
-a.text-warning:hover,
-a.text-warning:focus { color: darken(@warningText, 10%); }
-
-.text-error          { color: @errorText; }
+.text-error          { color: @red; }
 a.text-error:hover,
-a.text-error:focus   { color: darken(@errorText, 10%); }
+a.text-error:focus   { color: @red-dark1; }
 
-.text-info           { color: @infoText; }
-a.text-info:hover,
-a.text-info:focus    { color: darken(@infoText, 10%); }
-
-.text-success        { color: @successText; }
+.text-success        { color: @green; }
 a.text-success:hover,
-a.text-success:focus { color: darken(@successText, 10%); }
+a.text-success:focus { color: @green-dark1; }
 
 .muted,
 .text-warning,
@@ -182,7 +178,7 @@ a.text-success:focus { color: darken(@successText, 10%); }
 .page-header {
   padding-bottom: @halfGridGutterWidth;
   margin: @paragraphMargin 0;
-  border-bottom: 1px solid @grayLighter;
+  border-bottom: 1px solid @gray-light3;
 }
 
 
@@ -200,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   small {
     font-weight: normal;
     line-height: @baseLineHeight;
-    color: @gray;
+    color: @gray-dark1;
     display: block;
   }
   
@@ -229,7 +225,7 @@ h4 small { font-size: 80%; } // ~15px
 abbr[title],
 // Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
 abbr[data-original-title] {
-  border-bottom: 1px dotted @grayLight;
+  border-bottom: 1px dotted @gray-light1;
   cursor: help
 }
 
@@ -244,14 +240,14 @@ abbr.initialism {
 b,
 strong {
   font-weight: @fontWeightBold;
-  color: @grayDark;
+  color: @gray-dark3;
 }
 
 // Blockquotes
 blockquote {
   padding: 0 0 0 (@gridGutterWidth * 0.75);
   margin: 0 0 @paragraphMargin;
-  border-left: @quarterGridGutterWidth solid @grayLighter;
+  border-left: @quarterGridGutterWidth solid @gray-light2;
   
   p {
     margin-bottom: 0;
@@ -263,7 +259,7 @@ blockquote {
   small {
     display: block;
     line-height: @baseLineHeight;
-    color: @grayLight;
+    color: @gray;
     
     &:before {
       content: '\2014 \00A0';
@@ -276,7 +272,7 @@ blockquote {
     float: right;
     padding-right: (@gridGutterWidth * 0.75);
     padding-left: 0;
-    border-right: @quarterGridGutterWidth solid @grayLighter;
+    border-right: @quarterGridGutterWidth solid @gray-light2;
     border-left: 0;
     
     p,
@@ -349,7 +345,7 @@ samp {
   font-family: @monoFontFamily, monospace, serif;
   _font-family: @monoFontFamily, 'courier new', monospace;
   font-size: @baseFontSize;
-  color: @grayDark;
+  color: @gray-dark2;
   padding-left: 2px;
   padding-right: 2px;
 }
