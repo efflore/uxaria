@@ -1,0 +1,40 @@
+.uxaria-card {
+	display: grid;
+	grid-template-areas: 'image''title''content';
+	grid-template-rows: 8rem min-content max-content;
+	gap: 0 var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem));
+	border-radius: var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem));
+	box-shadow: 0 var(--uxaria-space-xsmall4, 0.25rem) var(--uxaria-space-small4, 0.5rem) rgba(0, 0, 0, 0.2);
+	margin: 0;
+	text-decoration: none;
+	transition: transform 0.2s ease-in-out;
+	transform: scale(1);
+	overflow: hidden;
+}
+
+a.uxaria-card:hover {
+	transform: scale(1.01);
+	text-decoration: none;
+}
+
+.uxaria-card__title {
+	grid-area: title;
+	padding: var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem)) var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem)) 0;
+}
+
+.uxaria-card__image {
+	grid-area: image;
+	background-color: aquamarine;
+	margin: 0;
+}
+
+.uxaria-card__content {
+	grid-area: content;
+	padding: 0 var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem)) var(--uxaria-card-gap, var(--uxaria-space-medium4, 1rem));
+	color: var(--uxaria-section-text-color, black);
+}
+
+.uxaria-card:hover .uxaria-card__content {
+	grid-area: content;
+	color: var(--uxaria-section-text-color, black);
+}

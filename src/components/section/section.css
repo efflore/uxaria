@@ -1,0 +1,105 @@
+/**
+ * Base Section Styling
+ */
+.uxaria-section {
+	background-color: var(--uxaria-section-background-color, white);
+	color: var(--uxaria-section-text-color, black);
+	font-size: var(--uxaria-font-size-base, 1rem);
+	line-height: var(--uxaria-line-height-base, 1.5);
+	font-family: var(--uxaria-section-font-family, sans-serif);
+	padding-top: var(--uxaria-section-padding, var(--uxaria-space-large4, 2rem));
+	padding-bottom: var(--uxaria-section-padding, var(--uxaria-space-large4, 2rem));
+}
+
+/**
+ * Variants
+ */
+.uxaria-section--lead {
+	--uxaria-section-padding: var(--uxaria-space-xlarge4);
+}
+
+.uxaria-section--lead p {
+	font-size: var(--uxaria-font-size-large);
+}
+
+@media (min-width: 32em) {
+	.uxaria-section--cards .uxaria-columns {
+		--uxaria-columns-template: 1fr 1fr;
+	}
+}
+
+@media (min-width: 48em) {
+	.uxaria-section--cards .uxaria-columns {
+		--uxaria-columns-template: 1fr 1fr 1fr;
+	}
+}
+
+/**
+ * Container
+ */
+.uxaria-section__container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--uxaria-container-padding, var(--uxaria-space-large4, 2rem));
+	padding-right: var(--uxaria-container-padding, var(--uxaria-space-large4, 2rem));
+	max-width: var(--uxaria-container-max-width, 65rem);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.uxaria-section__container * {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.uxaria-section__container *:first-child {
+	margin-top: 0;
+}
+
+.uxaria-section__container *:last-child {
+	margin-bottom: 0;
+}
+
+.uxaria-section__container h1,
+.uxaria-section__container h2,
+.uxaria-section__container h3,
+.uxaria-section__container h4,
+.uxaria-section__container h5,
+.uxaria-section__container h6 {
+	margin-top: 1em;
+	margin-bottom: max(0.5em, var(--uxaria-space-medium4, 1rem));
+	line-height: var(--uxaria-line-height-narrow, 1);
+}
+
+.uxaria-section__container h1 {
+	font-size: var(--uxaria-font-size-xxxlarge, calc(2.5 * var(--uxaria-font-size-base, 1rem)));
+}
+
+.uxaria-section__container h2 {
+	font-size: var(--uxaria-font-size-xxlarge, calc(2 * var(--uxaria-font-size-base, 1rem)));
+}
+
+.uxaria-section__container h3 {
+	font-size: var(--uxaria-font-size-xlarge, calc(1.5 * var(--uxaria-font-size-base, 1rem)));
+}
+
+.uxaria-section__container h4 {
+	font-size: var(--uxaria-font-size-xlarge, calc(1.25 * var(--uxaria-font-size-base, 1rem)));
+}
+
+.uxaria-section__container p {
+	max-width: 32em;
+}
+
+.uxaria-section__container a {
+	color: var(--uxaria-section-link-color, blue);
+	text-decoration: none;
+}
+
+.uxaria-section__container a:hover {
+	text-decoration: underline;
+	color: var(--uxaria-section-link-color, darkblue);
+	text-decoration: underline solid var(--uxaria-section-link-color, cornflowerblue) 1px;
+	text-underline-offset: var(--uxaria-space-xsmall4, 0.25rem);
+}

@@ -1,0 +1,50 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+:root {
+	/* spacings */
+	--uxaria-space-xsmall4: 0.25rem;
+	--uxaria-space-xsmall5: 0.3125rem;
+	--uxaria-space-xsmall6: 0.375rem;
+	--uxaria-space-small4: 0.5rem;
+	--uxaria-space-small5: 0.625rem;
+	--uxaria-space-small6: 0.75rem;
+	--uxaria-space-medium4: 1rem;
+	--uxaria-space-medium5: 1.25rem;
+	--uxaria-space-medium6: 1.5rem;
+	--uxaria-space-large4: 2rem;
+	--uxaria-space-large5: 2.5rem;
+	--uxaria-space-large6: 3rem;
+	--uxaria-space-xlarge4: 4rem;
+	--uxaria-space-xlarge5: 5rem;
+	--uxaria-space-xlarge6: 6rem;
+
+	/* fonts */
+	--uxaria-font-size-small: 0.75rem;
+	--uxaria-font-size-base: 1rem;
+	--uxaria-font-size-large: 1.25rem;
+	--uxaria-font-size-xlarge: 1.5rem;
+	--uxaria-font-size-xxlarge: 2rem;
+	--uxaria-font-size-xxxlarge: 2.5rem;
+	--uxaria-line-height-narrow: 1.25;
+	--uxaria-line-height-base: 1.5;
+	--uxaria-line-height-wide: 2;
+
+	/* containers */
+	--uxaria-container-padding: var(--uxaria-space-large4);
+	--uxaria-container-max-width: 65.5em;
+}
+
+html {
+	font-size: clamp(1em, calc(0.636em + 0.8vw), 1.5em);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}

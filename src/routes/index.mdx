@@ -1,0 +1,89 @@
+---
+title: Uxaria
+description: Opinionated user interface component framework based on Qwik. Lightweight, fast, accessibile, with sane defaults.
+---
+import Columns from '~/components/columns/columns';
+import { Section } from '~/components/section/section';
+import { Card } from '~/components/card/card';
+
+<Section variant="lead">
+	# {head.title}
+
+	Opinionated user interface component framework based on Qwik. Lightweight, fast, accessibile, with sane defaults.
+</Section>
+
+<Section variant="cards">
+	## Why Uxaria?
+	<Columns>
+	  <Card link="/docs/semantic-html">
+			<h3 q:slot="title">Semantic HTML</h3>
+
+			Our components are built with accessibility in mind. A semantic structure is the base of every good web application.
+		</Card>
+
+		<Card link="/docs/sane-css-presets">
+			<h3 q:slot="title">Sane CSS Presets</h3>
+
+			Our styles depend on a carefully thought out set of CSS variables for the most common elements. The rest is up to you!
+		</Card>
+
+		<Card link="/docs/fast-javascript">
+			<h3 q:slot="title">Fast JavaScript</h3>
+
+			Uxaria is based on Qwik - a new kind of web framework that can deliver instant loading web applications at any size or complexity.
+		</Card>
+
+		<Card link="/docs/markdown-on-steroids">
+			<h3 q:slot="title">Markdown on Steroids</h3>
+
+			Write your content in MDX. Simple like Markdown, powerful like JSX. Use components and JavaScript expressions.
+		</Card>
+
+		<Card link="/docs/design-visually">
+			<h3 q:slot="title">Design visually</h3>
+
+			Find the best values for CSS variables mastching your design in our visual customizer. Colors, spacing, typography.
+		</Card>
+
+		<Card link="/docs/design-visually">
+			<h3 q:slot="title">Code Components in JSX</h3>
+
+			Already familiar with React? – Write your own components in JSX. Resumable, scalable, lazy-loaded as needed thanks to Qwik.
+		</Card>
+	</Columns>
+</Section>
+
+<Section variant="list">
+  ## Explore Components
+	<Columns>
+	  <Card link="components/header">
+		  <h3 q:slot="title">Header</h3>
+
+			Wrap your header. Define responsive and scroll behavior. Child components will inherit colors, spacing, and typography.
+		</Card>
+
+		<Card link="components/footer">
+		  <h3 q:slot="title">Footer</h3>
+
+			Wrap your footer. Define responsive and scroll behavior. Child components will inherit colors, spacing, and typography.
+		</Card>
+
+	  <Card link="components/section">
+		  <h3 q:slot="title">Section</h3>
+
+			Wrap your main sections. Style different variants. Child components will inherit colors, spacing, and typography.
+		</Card>
+
+		<Card link="components/columns">
+		  <h3 q:slot="title">Columns</h3>
+
+			Set up a multi-column layout. Predefined for 2, 3, 4, and 6 equal columns on large screens, sensefully linearized on smaller screens.
+		</Card>
+
+		<Card link="components/card">
+		  <h3 q:slot="title">Card</h3>
+
+			Link to other pages with an appealing card. Includes a title, an optional preview, and a content area which can hold any child elements.
+		</Card>
+	</Columns>
+</Section>

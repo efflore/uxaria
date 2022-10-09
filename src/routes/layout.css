@@ -1,0 +1,32 @@
+/**
+ * Responsive visibility helper classes
+ */
+@media screen and (min-width: 32em) {
+	.xsmall-only {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 32em) {
+	.small-up {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 48em) {
+	.medium-up {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 72em) {
+	.large-up {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 108em) {
+	.xlarge-up {
+		display: none;
+	}
+}
