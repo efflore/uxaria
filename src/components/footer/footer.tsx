@@ -9,5 +9,4 @@ export default component$(() => {
 			<p>My footer</p>
 		</footer>
 	);
-
 });

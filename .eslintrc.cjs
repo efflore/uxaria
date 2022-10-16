@@ -5,7 +5,12 @@ module.exports = {
 		es2021: true,
 		node: true
 	},
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:qwik/recommended', 'plugin:mdx/recommended'],
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:qwik/recommended',
+		'plugin:mdx/recommended'
+	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		tsconfigRootDir: __dirname,
@@ -14,7 +19,8 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true
-		}
+		},
+		extraFileExtensions: ['.mdx']
 	},
 	plugins: ['@typescript-eslint'],
 	rules: {

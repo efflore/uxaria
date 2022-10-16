@@ -25,11 +25,11 @@ export default component$(() => {
 
 	useClientEffect$(() => {
 		if (typeof window === 'undefined') return;
-		const media: Record<string, { mql: MediaQueryList, set: any }> = {};
+		const media: Record<string, { mql: MediaQueryList; set: any }> = {};
 		const listen = (key: string) => {
 			media[key] = {
 				mql: window.matchMedia(mediaQueries[key]),
-				set: (e: MediaQueryListEvent) => $mq[key] = e.matches
+				set: (e: MediaQueryListEvent) => ($mq[key] = e.matches)
 			};
 			media[key].mql.addEventListener('change', media[key].set);
 		};
@@ -48,11 +48,20 @@ export default component$(() => {
 
 	return (
 		<>
-			<div class={`uxaria-app ${Object.keys($mq).filter(key => $mq[key]).map(key => `mq-${key}`).join(' ')}`}>
+			<div
+				class={`uxaria-app ${Object.keys($mq)
+					.filter((key) => $mq[key])
+					.map((key) => `mq-${key}`)
+					.join(' ')}`}
+			>
 				<Header />
 				<main>
 					<ul>
-						{Object.keys($mq).map((key) => <li>{key}: {$mq[key] ? 'true' : ''}</li>)}
+						{Object.keys($mq).map((key) => (
+							<li>
+								{key}: {$mq[key] ? 'true' : ''}
+							</li>
+						))}
 					</ul>
 					<Slot />
 				</main>
