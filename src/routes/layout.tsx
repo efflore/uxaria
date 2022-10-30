@@ -1,4 +1,4 @@
-import { component$, Slot, useClientEffect$, useStore, useStyles$ } from '@builder.io/qwik';
+import { component$, Slot, /* useClientEffect$, useStore, */ useStyles$ } from '@builder.io/qwik';
 import Footer from '~/components/footer/footer';
 import Header from '~/components/header/header';
 import styles from './layout.css?inline';
@@ -6,7 +6,7 @@ import styles from './layout.css?inline';
 export default component$(() => {
 	useStyles$(styles);
 
-	const breakpoints = {
+	/* const breakpoints = {
 		small: '32em',
 		medium: '48em',
 		large: '72em',
@@ -44,25 +44,24 @@ export default component$(() => {
 				media[key].mql.removeEventListener('change', media[key].set);
 			}
 		};
-	});
+	}); */
 
 	return (
 		<>
-			<div
-				class={`uxaria-app ${Object.keys($mq)
+			<div class="uxaria-app">
+				{/* class={`uxaria-app ${Object.keys($mq)
 					.filter((key) => $mq[key])
 					.map((key) => `mq-${key}`)
-					.join(' ')}`}
-			>
+				.join(' ')}`} */}
 				<Header />
 				<main>
-					<ul>
+					{/* <ul>
 						{Object.keys($mq).map((key) => (
 							<li>
 								{key}: {$mq[key] ? 'true' : ''}
 							</li>
 						))}
-					</ul>
+						</ul> */}
 					<Slot />
 				</main>
 				<Footer />

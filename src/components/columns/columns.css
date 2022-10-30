@@ -1,7 +1,7 @@
 .uxaria-columns {
 	display: grid;
 	width: 100%;
-	gap: var(--uxaria-columns-gap, var(--uxaria-space-large4, 2rem));
+	gap: var(--uxaria-size-m, 1.6rem);
 	grid-template-columns: var(--uxaria-columns-template, 1fr);
 }
 

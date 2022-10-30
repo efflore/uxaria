@@ -7,41 +7,80 @@
  */
 
 :root {
-	/* spacings */
-	--uxaria-space-xsmall4: 0.25rem;
-	--uxaria-space-xsmall5: 0.3125rem;
-	--uxaria-space-xsmall6: 0.375rem;
-	--uxaria-space-small4: 0.5rem;
-	--uxaria-space-small5: 0.625rem;
-	--uxaria-space-small6: 0.75rem;
-	--uxaria-space-medium4: 1rem;
-	--uxaria-space-medium5: 1.25rem;
-	--uxaria-space-medium6: 1.5rem;
-	--uxaria-space-large4: 2rem;
-	--uxaria-space-large5: 2.5rem;
-	--uxaria-space-large6: 3rem;
-	--uxaria-space-xlarge4: 4rem;
-	--uxaria-space-xlarge5: 5rem;
-	--uxaria-space-xlarge6: 6rem;
+	/* base sizing */
+	--uxaria-size-base: 1rem;
+	--uxaria-size-factor: 1.618;
+	--uxaria-size-factor-sqrt: 1.272;
 
-	/* fonts */
-	--uxaria-font-size-small: 0.75rem;
-	--uxaria-font-size-base: 1rem;
-	--uxaria-font-size-large: 1.25rem;
-	--uxaria-font-size-xlarge: 1.5rem;
-	--uxaria-font-size-xxlarge: 2rem;
-	--uxaria-font-size-xxxlarge: 2.5rem;
-	--uxaria-line-height-narrow: 1.25;
-	--uxaria-line-height-base: 1.5;
-	--uxaria-line-height-wide: 2;
+	/* spacing sizes */
+	--uxaria-size-xxs: calc(var(--uxaria-size-base) / (var(--uxaria-size-factor) * var(--uxaria-size-factor)));
+	--uxaria-size-xs: calc(var(--uxaria-size-base) / var(--uxaria-size-factor));
+	--uxaria-size-s: var(--uxaria-size-base);
+	--uxaria-size-m: calc(var(--uxaria-size-base) * var(--uxaria-size-factor));
+	--uxaria-size-l: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
+	--uxaria-size-xl: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
+	--uxaria-size-xxl: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
+
+	/* fonts sizes */
+	--uxaria-font-size-small: calc(var(--uxaria-size-base) / var(--uxaria-size-factor-sqrt));
+	--uxaria-font-size-base: var(--uxaria-size-base);
+	--uxaria-font-size-large: calc(var(--uxaria-size-base) * var(--uxaria-size-factor-sqrt));
+	--uxaria-font-size-xlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor));
+	--uxaria-font-size-xxlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor-sqrt));
+	--uxaria-font-size-xxxlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
+	--uxaria-line-height-narrow: var(--uxaria-size-factor-sqrt);
+	--uxaria-line-height-base: var(--uxaria-size-factor);
 
 	/* containers */
-	--uxaria-container-padding: var(--uxaria-space-large4);
-	--uxaria-container-max-width: 65.5em;
+	--uxaria-container-padding: var(--uxaria-size-m);
+	--uxaria-container-max-width: 69.12em;
 }
 
 html {
-	font-size: clamp(1em, calc(0.636em + 0.8vw), 1.5em);
+	/* 16px */
+	font-size: 1em;
+	/* square root of 2 */
+	line-height: var(--uxaria-size-factor);
+}
+
+/* 768px till 1152px */
+@media screen and (min-width: 48em) and (max-width: 72em) {
+	html {
+		/* between 16px and 20px */
+		font-size: calc(0.5em + 1.0417vw);
+	}
+}
+
+/* 1152px till 1728px */
+@media screen and (min-width: 72em) and (max-width: 108em) {
+	html {
+		/* between 20px and 25px */
+		font-size: calc(0.625em + 0.8618vw);
+	}
+}
+
+/* wider than 1728px */
+@media screen and (min-width: 108em) {
+	html {
+		/* 25px */
+		font-size: 1.5625em;
+	}
+}
+
+/* reduced spacing on smaller devices */
+@media (max-aspect-ratio: 3/4) and (max-width: 72em) {
+	:root {
+		--uxaria-size-factor: 1.5;
+		--uxaria-size-factor-sqrt: 1.225;
+	}
+}
+
+/* even more reduced spacing on smaller devices with very unequal screen sizes */
+@media (max-aspect-ratio: 2/3) and (max-width: 48em) {
+	:root {
+		--uxaria-size-factor: 1.414;
+		--uxaria-size-factor-sqrt: 1.189;
+	}
 }
 
 body {

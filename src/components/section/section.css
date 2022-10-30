@@ -5,10 +5,10 @@
 	background-color: var(--uxaria-section-background-color, white);
 	color: var(--uxaria-section-text-color, black);
 	font-size: var(--uxaria-font-size-base, 1rem);
-	line-height: var(--uxaria-line-height-base, 1.5);
+	line-height: var(--uxaria-line-height-base, 1.6);
 	font-family: var(--uxaria-section-font-family, sans-serif);
-	padding-top: var(--uxaria-section-padding, var(--uxaria-space-large4, 2rem));
-	padding-bottom: var(--uxaria-section-padding, var(--uxaria-space-large4, 2rem));
+	padding-top: var(--uxaria-section-padding, var(--uxaria-size-l, 2.6rem));
+	padding-bottom: var(--uxaria-section-padding, var(--uxaria-size-l, 2.6rem));
 }
 
 /**
@@ -40,8 +40,8 @@
 .uxaria-section__container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--uxaria-container-padding, var(--uxaria-space-large4, 2rem));
-	padding-right: var(--uxaria-container-padding, var(--uxaria-space-large4, 2rem));
+	padding-left: var(--uxaria-container-padding, var(--uxaria-size-m, 1.6rem));
+	padding-right: var(--uxaria-container-padding, var(--uxaria-size-m, 1.6rem));
 	max-width: var(--uxaria-container-max-width, 65rem);
 	box-sizing: border-box;
 }
@@ -53,8 +53,8 @@
 .uxaria-section__container h5,
 .uxaria-section__container h6 {
 	margin-top: 1em;
-	margin-bottom: max(0.5em, var(--uxaria-space-medium4, 1rem));
-	line-height: var(--uxaria-line-height-narrow, 1);
+	margin-bottom: max(0.5em, var(--uxaria-size-s, 1rem));
+	line-height: var(--uxaria-line-height-narrow, 1.25);
 }
 
 .uxaria-section__container h1 {
@@ -92,10 +92,6 @@
 	margin-top: 0;
 }
 
-.uxaria-section__container p:last-child {
-	margin-bottom: 0;
-}
-
 .uxaria-section__container a {
 	color: var(--uxaria-section-link-color, blue);
 	text-decoration: none;
@@ -105,5 +101,5 @@
 	text-decoration: underline;
 	color: var(--uxaria-section-link-color, darkblue);
 	text-decoration: underline solid var(--uxaria-section-link-color, cornflowerblue) 1px;
-	text-underline-offset: var(--uxaria-space-xsmall4, 0.25rem);
+	text-underline-offset: var(--uxaria-size-xxs, 0.25rem);
 }

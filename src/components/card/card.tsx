@@ -1,4 +1,5 @@
 import { component$, Slot, useStyles$ } from '@builder.io/qwik';
+import { Link } from '@builder.io/qwik-city';
 import styles from './card.css?inline';
 
 export interface CardProps {
@@ -14,7 +15,7 @@ export const Card = component$((props: CardProps) => {
 	};
 
 	return (
-		<a href={props.link} class="uxaria-card">
+		<Link href={props.link} class="uxaria-card">
 			<div class="uxaria-card__title">
 				<Slot name="title" />
 			</div>
@@ -24,6 +25,6 @@ export const Card = component$((props: CardProps) => {
 			<div class="uxaria-card__content">
 				<Slot />
 			</div>
-		</a>
+		</Link>
 	);
 });

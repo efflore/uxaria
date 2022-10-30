@@ -1,3 +1,6 @@
+import { component$ } from '@builder.io/qwik';
+import type { DocumentHead } from '@builder.io/qwik-city';
+
 import Columns from '~/components/columns/columns';
 import { Section } from '~/components/section/section';
 import { Card } from '~/components/card/card';
@@ -7,11 +10,17 @@ import { CSS3Logo } from '~/components/logos/css3';
 import { JSLogo } from '~/components/logos/js';
 import { MDXLogo } from '~/components/logos/mdx';
 import { QwikLogo } from '~/components/logos/qwik';
-import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+
+import SpacingCustomizer from '~/components/customizers/spacing-customizer';
 
 export const head: DocumentHead = {
 	title: 'Uxaria',
+	meta: [
+		{
+			name: 'description',
+			content: 'Opinionated user interface component framework based on Qwik. Lightweight, fast, accessibile, with sane defaults.',
+		},
+	],
 };
 
 export default component$(() => {
@@ -19,7 +28,7 @@ export default component$(() => {
 		<>
 			<Section variant="lead">
 				<h1>{head.title}</h1>
-				<p>Opinionated user interface component framework based on Qwik. Lightweight, fast, accessibile, with sane defaults.</p>
+				<p>{head.meta?.find((m) => m.name === 'description')?.content}</p>
 			</Section>
 
 			<Section variant="cards">
@@ -70,6 +79,11 @@ export default component$(() => {
 						<p>Already familiar with React? – Write your own components in JSX. Resumable, scalable, lazy-loaded as needed thanks to Qwik.</p>
 					</Card>
 				</Columns>
+			</Section>
+
+			<Section variant="customizers">
+				<h2>Customize</h2>
+				<SpacingCustomizer />
 			</Section>
 
 			<Section variant="list">
