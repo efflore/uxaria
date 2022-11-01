@@ -2,8 +2,8 @@
  * Base Section Styling
  */
 .uxaria-section {
-	background-color: var(--uxaria-section-background-color, white);
-	color: var(--uxaria-section-text-color, black);
+	background-color: var(--uxaria-section-color-background, var(--uxaria-color-background));
+	color: var(--uxaria-section-color-text, var(--uxaria-color-text));
 	font-size: var(--uxaria-font-size-base, 1rem);
 	line-height: var(--uxaria-line-height-base, 1.6);
 	font-family: var(--uxaria-section-font-family, sans-serif);
@@ -15,7 +15,7 @@
  * Variants
  */
 .uxaria-section--lead {
-	--uxaria-section-padding: var(--uxaria-space-xlarge4);
+	--uxaria-section-padding: var(--uxaria-size-l);
 }
 
 .uxaria-section--lead p {
@@ -53,7 +53,7 @@
 .uxaria-section__container h5,
 .uxaria-section__container h6 {
 	margin-top: 1em;
-	margin-bottom: max(0.5em, var(--uxaria-size-s, 1rem));
+	margin-bottom: max(0.41em, var(--uxaria-size-s, 1rem));
 	line-height: var(--uxaria-line-height-narrow, 1.25);
 }
 
@@ -70,7 +70,7 @@
 }
 
 .uxaria-section__container h4 {
-	font-size: var(--uxaria-font-size-xlarge, calc(1.25 * var(--uxaria-font-size-base, 1rem)));
+	font-size: var(--uxaria-font-size-large, calc(1.25 * var(--uxaria-font-size-base, 1rem)));
 }
 
 .uxaria-section__container h1:first-child,
@@ -93,13 +93,18 @@
 }
 
 .uxaria-section__container a {
-	color: var(--uxaria-section-link-color, blue);
+	color: var(--uxaria-section-color-link, var(--uxaria-color-link));
 	text-decoration: none;
 }
 
 .uxaria-section__container a:hover {
 	text-decoration: underline;
-	color: var(--uxaria-section-link-color, darkblue);
-	text-decoration: underline solid var(--uxaria-section-link-color, cornflowerblue) 1px;
+	color: var(--uxaria-section-color-hover, var(--uxaria-color-link-hover));
+	text-decoration: underline solid var(--uxaria-section-color-link-underline, var(--uxaria-color-link-underline)) 1px;
 	text-underline-offset: var(--uxaria-size-xxs, 0.25rem);
+}
+
+.uxaria-section__container a:focus-visible {
+	outline: 3px solid var(--uxaria-section-color-link, var(--uxaria-color-link));
+	outline-offset: var(--uxaria-size-xxs, 0.25rem);
 }

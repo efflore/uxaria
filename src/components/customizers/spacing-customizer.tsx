@@ -8,9 +8,9 @@ export default component$(() => {
 	const customProperties: string[] = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
 
 	return (
-		<div class="spacing-customizer">
+		<div class="uxaria-spacing-customizer">
 			<h3>Spacings</h3>
-			<div class="spacing-customizer__input">
+			<div class="uxaria-spacing-customizer__input">
 				<label>Base size</label>
 				<input
 					type="number"
@@ -25,13 +25,13 @@ export default component$(() => {
 					}}
 				/>%
 			</div>
-			<ul class="spacing-customizer__output">
+			<ul class="uxaria-spacing-customizer__output">
 				{customProperties.map((key: string) => (
-					<li class="spacing-customizer__property" key={key}>
-						<span class="spacing-customizer__placeholder"
+					<li class="uxaria-spacing-customizer__property" key={key}>
+						<span class="uxaria-spacing-customizer__placeholder"
 							style={`height: var(--uxaria-size-${key})`}
 						></span>
-						<span class="spacing-customizer__css">--uxaria-size-{key}</span>
+						<span class="uxaria-spacing-customizer__css">--uxaria-size-{key}</span>
 					</li>
 				))}
 			</ul>

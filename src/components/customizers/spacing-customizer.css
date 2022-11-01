@@ -1,18 +1,22 @@
-.spacing-customizer__output {
+.uxaria-spacing-customizer {
+	margin-bottom: var(--uxaria-size-m, 1.6rem);
+}
+
+.uxaria-spacing-customizer__output {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.spacing-customizer__property {
+.uxaria-spacing-customizer__property {
 	display: flex;
 	align-items: center;
 	gap: var(--uxaria-size-s);
 	padding-bottom: var(--uxaria-size-xs);
 }
 
-.spacing-customizer__placeholder {
+.uxaria-spacing-customizer__placeholder {
 	display: block;
 	width: 50%;
-	background-color: hotpink;
+	background-color: #d7b0de;
 }

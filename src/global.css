@@ -34,6 +34,16 @@
 	/* containers */
 	--uxaria-container-padding: var(--uxaria-size-m);
 	--uxaria-container-max-width: 69.12em;
+
+	/* colors */
+	--uxaria-color-background: white;
+	--uxaria-color-background-alt: #f3f3f3;
+	--uxaria-color-border: #d5d5d5;
+	--uxaria-color-text: #333333;
+	--uxaria-color-text-dimmed: #5c5c5c;
+	--uxaria-color-link: #436bd1;
+	--uxaria-color-link-hover: #3053ad;
+	--uxaria-color-link-underline: #adc0e8;
 }
 
 html {

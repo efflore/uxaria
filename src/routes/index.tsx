@@ -9,9 +9,11 @@ import { HTML5Logo } from '~/components/logos/html5';
 import { CSS3Logo } from '~/components/logos/css3';
 import { JSLogo } from '~/components/logos/js';
 import { MDXLogo } from '~/components/logos/mdx';
+import { ColorScale } from '~/components/color-scale/color-scale';
 import { QwikLogo } from '~/components/logos/qwik';
 
 import SpacingCustomizer from '~/components/customizers/spacing-customizer';
+import ColorCustomizer from '~/components/customizers/color-customizer';
 
 export const head: DocumentHead = {
 	title: 'Uxaria',
@@ -34,7 +36,7 @@ export default component$(() => {
 			<Section variant="cards">
 				<h2>Why Uxaria?</h2>
 				<Columns>
-					<Card link="/docs/semantic-html" previewBackground="#fdab92">
+					<Card link="/docs/semantic-html">
 						<h3 q:slot="title">Semantic HTML</h3>
 						<div q:slot="preview">
 							<HTML5Logo />
@@ -42,7 +44,7 @@ export default component$(() => {
 						<p>Our components are built with accessibility in mind. A semantic structure is the base of every good web application.</p>
 					</Card>
 
-					<Card link="/docs/sane-css-presets" previewBackground="#a5bbf1">
+					<Card link="/docs/sane-css-presets">
 						<h3 q:slot="title">Sane CSS Presets</h3>
 						<div q:slot="preview">
 							<CSS3Logo />
@@ -50,7 +52,7 @@ export default component$(() => {
 						<p>Our styles depend on a carefully thought out set of CSS variables for the most common elements. The rest is up to you!</p>
 					</Card>
 
-					<Card link="/docs/fast-javascript" previewBackground="#a9c995">
+					<Card link="/docs/fast-javascript">
 						<h3 q:slot="title">Fast JavaScript</h3>
 						<div q:slot="preview">
 							<JSLogo />
@@ -58,7 +60,7 @@ export default component$(() => {
 						<p>Uxaria is based on Qwik - a new kind of web framework that can deliver instant loading web applications at any size or complexity.</p>
 					</Card>
 
-					<Card link="/docs/markdown-on-steroids" previewBackground="#ffdba0">
+					<Card link="/docs/markdown-on-steroids">
 						<h3 q:slot="title">Markdown on Steroids</h3>
 						<div q:slot="preview">
 							<MDXLogo />
@@ -69,9 +71,12 @@ export default component$(() => {
 					<Card link="/docs/design-visually">
 						<h3 q:slot="title">Design Visually</h3>
 						<p>Find the best values for CSS variables mastching your design in our visual customizer. Colors, spacing, typography.</p>
+						<div q:slot="preview">
+							<ColorScale colors={['#d7deee', '#adc0e8', '#85a3e8', '#6086e3', '#436bd1', '#3053ad', '#243d7c', '#1a2849', '#0c111b']} />
+						</div>
 					</Card>
 
-					<Card link="/docs/code-components" previewBackground="#dbcbfa">
+					<Card link="/docs/code-components">
 						<h3 q:slot="title">Code Components</h3>
 						<div q:slot="preview">
 							<QwikLogo />
@@ -84,6 +89,7 @@ export default component$(() => {
 			<Section variant="customizers">
 				<h2>Customize</h2>
 				<SpacingCustomizer />
+				<ColorCustomizer />
 			</Section>
 
 			<Section variant="list">
