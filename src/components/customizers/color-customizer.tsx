@@ -17,7 +17,7 @@ export default component$(() => {
 	}
 
 	return (
-		<div class="uxaria-color-customizer">
+		<div class="ux-color-customizer">
 			<h3>Colors</h3>
 			<Columns>
 				{Object.keys(colorGroups).map((key) => (

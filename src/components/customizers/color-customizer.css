@@ -1,25 +1,25 @@
-.uxaria-color-customizer {
-	margin-bottom: var(--uxaria-size-m, 1.6rem);
+.ux-color-customizer {
+	margin-bottom: var(--ux-size-m, 1.6rem);
 }
 
-.uxaria-color-customizer .uxaria-columns {
-	--uxaria-columns-template: repeat(2, 1fr);
+.ux-color-customizer .ux-columns {
+	--ux-columns-template: repeat(2, 1fr);
 }
 
 @media (min-width: 32em) {
-	.uxaria-color-customizer .uxaria-columns {
-		--uxaria-columns-template: repeat(3, 1fr);
+	.ux-color-customizer .ux-columns {
+		--ux-columns-template: repeat(3, 1fr);
 	}
 }
 
 @media (min-width: 48em) {
-	.uxaria-color-customizer .uxaria-columns {
-		--uxaria-columns-template: repeat(4, 1fr);
+	.ux-color-customizer .ux-columns {
+		--ux-columns-template: repeat(4, 1fr);
 	}
 }
 
 @media (min-width: 72em) {
-	.uxaria-color-customizer .uxaria-columns {
-		--uxaria-columns-template: repeat(6, 1fr);
+	.ux-color-customizer .ux-columns {
+		--ux-columns-template: repeat(6, 1fr);
 	}
 }

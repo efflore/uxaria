@@ -1,26 +1,27 @@
-.uxaria-icon-link {
+.ux-icon-link {
 	display: grid;
 	grid-template-areas: 'icon' 'name';
 	grid-template-rows: min-content min-content max-content;
 	justify-items: center;
-	gap: 0 var(--uxaria-size-s, 1rem);
+	gap: 0 var(--ux-size-s, 1rem);
 	margin: 0;
 	text-decoration: none;
-	border-radius: var(--uxaria-size-s, 1rem);
+	border-radius: var(--ux-size-s, 1rem);
 	transition: transform 0.2s ease-in-out;
 	transform: scale(1);
 }
 
-a.uxaria-icon-link:hover {
+a.ux-icon-link:hover,
+a.ux-icon-link:focus {
 	transform: scale(1.01);
 	text-decoration: none;
 }
 
-a.uxaria-icon-link:active {
+a.ux-icon-link:active {
 	transform: scale(0.99);
 }
 
-.uxaria-icon-link__icon {
+.ux-icon-link__icon {
 	grid-area: icon;
 	aspect-ratio: 1 / 1;
 	display: flex;
@@ -29,18 +30,18 @@ a.uxaria-icon-link:active {
 	width: 100%;
 }
 
-.uxaria-icon-link__icon>div {
+.ux-icon-link__icon>div {
 	display: contents;
 	height: 100%;
 }
 
-.uxaria-icon-link__name {
+.ux-icon-link__name {
 	grid-area: name;
-	padding: var(--uxaria-size-xs, 0.6rem) 0 0;
+	padding: var(--ux-size-xs, 0.6rem) 0 0;
 	overflow: hidden;
 	align-self: center;
 }
 
-.uxaria-icon-link__name p:last-child {
+.ux-icon-link__name p:last-child {
 	margin-bottom: 0;
 }

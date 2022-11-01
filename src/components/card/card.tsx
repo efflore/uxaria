@@ -15,14 +15,14 @@ export const Card = component$((props: CardProps) => {
 	};
 
 	return (
-		<Link href={props.link} class="uxaria-card">
-			<div class="uxaria-card__title">
+		<Link href={props.link} class="ux-card">
+			<div class="ux-card__title">
 				<Slot name="title" />
 			</div>
-			<div class="uxaria-card__preview" style={previewStyle()}>
+			<div class="ux-card__preview" style={previewStyle()}>
 				<Slot name="preview" />
 			</div>
-			<div class="uxaria-card__content">
+			<div class="ux-card__content">
 				<Slot />
 			</div>
 		</Link>

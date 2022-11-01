@@ -5,7 +5,7 @@ export default component$(() => {
 	useStyles$(styles);
 
 	return (
-		<div class="uxaria-columns">
+		<div class="ux-columns">
 			<Slot />
 		</div>
 	);

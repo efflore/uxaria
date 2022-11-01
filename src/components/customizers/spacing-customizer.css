@@ -1,21 +1,21 @@
-.uxaria-spacing-customizer {
-	margin-bottom: var(--uxaria-size-m, 1.6rem);
+.ux-spacing-customizer {
+	margin-bottom: var(--ux-size-m, 1.6rem);
 }
 
-.uxaria-spacing-customizer__output {
+.ux-spacing-customizer__output {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.uxaria-spacing-customizer__property {
+.ux-spacing-customizer__property {
 	display: flex;
 	align-items: center;
-	gap: var(--uxaria-size-s);
-	padding-bottom: var(--uxaria-size-xs);
+	gap: var(--ux-size-s);
+	padding-bottom: var(--ux-size-xs);
 }
 
-.uxaria-spacing-customizer__placeholder {
+.ux-spacing-customizer__placeholder {
 	display: block;
 	width: 50%;
 	background-color: #d7b0de;

@@ -10,11 +10,11 @@ export const IconLink = component$((props: IconProps) => {
 	useStyles$(styles);
 
 	return (
-		<Link href={props.link} class="uxaria-icon-link">
-			<div class="uxaria-icon-link__icon">
+		<Link href={props.link} class="ux-icon-link">
+			<div class="ux-icon-link__icon">
 				<Slot name="icon" />
 			</div>
-			<div class="uxaria-icon-link__name">
+			<div class="ux-icon-link__name">
 				<Slot name="name" />
 			</div>
 		</Link>

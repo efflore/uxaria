@@ -48,8 +48,8 @@ export default component$(() => {
 
 	return (
 		<>
-			<div class="uxaria-app">
-				{/* class={`uxaria-app ${Object.keys($mq)
+			<div class="ux-app">
+				{/* class={`ux-app ${Object.keys($mq)
 					.filter((key) => $mq[key])
 					.map((key) => `mq-${key}`)
 				.join(' ')}`} */}

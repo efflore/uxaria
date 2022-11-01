@@ -1,4 +1,4 @@
-.uxaria-color-scale {
+.ux-color-scale {
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
@@ -9,27 +9,27 @@
 	overflow: hidden;
 }
 
-.uxaria-color-scale--icon {
-	border-radius: var(--uxaria-size-xs, 0.6rem);
-	box-shadow: 0 var(--uxaria-size-xxs, 0.4rem) var(--uxaria-size-xs, 0.6rem) rgba(0, 0, 0, 0.15);
+.ux-color-scale--icon {
+	border-radius: var(--ux-size-xs, 0.6rem);
+	box-shadow: 0 var(--ux-size-xxs, 0.4rem) var(--ux-size-xs, 0.6rem) rgba(0, 0, 0, 0.15);
 	overflow: hidden;
 }
 
-.uxaria-color-scale li {
+.ux-color-scale li {
 	display: block;
 	aspect-ratio: 1 / 1;
 	width: 25%;
 }
 
-.uxaria-color-scale li:nth-child(5) {
+.ux-color-scale li:nth-child(5) {
 	width: 100%;
 	display: flex;
 	align-items: flex-end;
-	padding: var(--uxaria-size-xxs, 0.4rem) var(--uxaria-size-xs, 0.6rem);
+	padding: var(--ux-size-xxs, 0.4rem) var(--ux-size-xs, 0.6rem);
 	box-sizing: border-box;
 }
 
-.uxaria-color-scale :not(:nth-child(5)) span {
+.ux-color-scale :not(:nth-child(5)) span {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	height: 1px;
@@ -39,7 +39,7 @@
 	width: 1px;
 }
 
-.uxaria-color-scale :nth-child(5) span {
+.ux-color-scale :nth-child(5) span {
 	color: white;
-	font-size: var(--uxaria-font-size-small);
+	font-size: var(--ux-font-size-small);
 }

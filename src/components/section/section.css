@@ -1,110 +1,111 @@
 /**
  * Base Section Styling
  */
-.uxaria-section {
-	background-color: var(--uxaria-section-color-background, var(--uxaria-color-background));
-	color: var(--uxaria-section-color-text, var(--uxaria-color-text));
-	font-size: var(--uxaria-font-size-base, 1rem);
-	line-height: var(--uxaria-line-height-base, 1.6);
-	font-family: var(--uxaria-section-font-family, sans-serif);
-	padding-top: var(--uxaria-section-padding, var(--uxaria-size-l, 2.6rem));
-	padding-bottom: var(--uxaria-section-padding, var(--uxaria-size-l, 2.6rem));
+.ux-section {
+	background-color: var(--ux-section-color-background, var(--ux-color-background));
+	color: var(--ux-section-color-text, var(--ux-color-text));
+	font-size: var(--ux-font-size-base, 1rem);
+	line-height: var(--ux-line-height-base, 1.6);
+	font-family: var(--ux-section-font-family, sans-serif);
+	padding-top: var(--ux-section-padding, var(--ux-size-l, 2.6rem));
+	padding-bottom: var(--ux-section-padding, var(--ux-size-l, 2.6rem));
 }
 
 /**
  * Variants
  */
-.uxaria-section--lead {
-	--uxaria-section-padding: var(--uxaria-size-l);
+.ux-section--lead {
+	--ux-section-padding: var(--ux-size-l);
 }
 
-.uxaria-section--lead p {
-	font-size: var(--uxaria-font-size-large);
+.ux-section--lead p {
+	font-size: var(--ux-font-size-large);
 }
 
 @media (min-width: 32em) {
-	.uxaria-section--cards .uxaria-columns {
-		--uxaria-columns-template: 1fr 1fr;
+	.ux-section--cards .ux-columns {
+		--ux-columns-template: 1fr 1fr;
 	}
 }
 
 @media (min-width: 48em) {
-	.uxaria-section--cards .uxaria-columns {
-		--uxaria-columns-template: 1fr 1fr 1fr;
+	.ux-section--cards .ux-columns {
+		--ux-columns-template: 1fr 1fr 1fr;
 	}
 }
 
 /**
  * Container
  */
-.uxaria-section__container {
+.ux-section__container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--uxaria-container-padding, var(--uxaria-size-m, 1.6rem));
-	padding-right: var(--uxaria-container-padding, var(--uxaria-size-m, 1.6rem));
-	max-width: var(--uxaria-container-max-width, 65rem);
+	padding-left: var(--ux-container-padding, var(--ux-size-m, 1.6rem));
+	padding-right: var(--ux-container-padding, var(--ux-size-m, 1.6rem));
+	max-width: var(--ux-container-max-width, 65rem);
 	box-sizing: border-box;
 }
 
-.uxaria-section__container h1,
-.uxaria-section__container h2,
-.uxaria-section__container h3,
-.uxaria-section__container h4,
-.uxaria-section__container h5,
-.uxaria-section__container h6 {
+.ux-section__container h1,
+.ux-section__container h2,
+.ux-section__container h3,
+.ux-section__container h4,
+.ux-section__container h5,
+.ux-section__container h6 {
 	margin-top: 1em;
-	margin-bottom: max(0.41em, var(--uxaria-size-s, 1rem));
-	line-height: var(--uxaria-line-height-narrow, 1.25);
+	margin-bottom: max(0.41em, var(--ux-size-s, 1rem));
+	line-height: var(--ux-line-height-narrow, 1.25);
 }
 
-.uxaria-section__container h1 {
-	font-size: var(--uxaria-font-size-xxxlarge, calc(2.5 * var(--uxaria-font-size-base, 1rem)));
+.ux-section__container h1 {
+	font-size: var(--ux-font-size-xxxlarge, calc(2.5 * var(--ux-font-size-base, 1rem)));
 }
 
-.uxaria-section__container h2 {
-	font-size: var(--uxaria-font-size-xxlarge, calc(2 * var(--uxaria-font-size-base, 1rem)));
+.ux-section__container h2 {
+	font-size: var(--ux-font-size-xxlarge, calc(2 * var(--ux-font-size-base, 1rem)));
 }
 
-.uxaria-section__container h3 {
-	font-size: var(--uxaria-font-size-xlarge, calc(1.5 * var(--uxaria-font-size-base, 1rem)));
+.ux-section__container h3 {
+	font-size: var(--ux-font-size-xlarge, calc(1.5 * var(--ux-font-size-base, 1rem)));
 }
 
-.uxaria-section__container h4 {
-	font-size: var(--uxaria-font-size-large, calc(1.25 * var(--uxaria-font-size-base, 1rem)));
+.ux-section__container h4 {
+	font-size: var(--ux-font-size-large, calc(1.25 * var(--ux-font-size-base, 1rem)));
 }
 
-.uxaria-section__container h1:first-child,
-.uxaria-section__container h2:first-child,
-.uxaria-section__container h3:first-child,
-.uxaria-section__container h4:first-child,
-.uxaria-section__container h5:first-child,
-.uxaria-section__container h6:first-child {
+.ux-section__container h1:first-child,
+.ux-section__container h2:first-child,
+.ux-section__container h3:first-child,
+.ux-section__container h4:first-child,
+.ux-section__container h5:first-child,
+.ux-section__container h6:first-child {
 	margin-top: 0;
 }
 
-.uxaria-section__container p {
+.ux-section__container p {
 	max-width: 32em;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
-.uxaria-section__container p:first-child {
+.ux-section__container p:first-child {
 	margin-top: 0;
 }
 
-.uxaria-section__container a {
-	color: var(--uxaria-section-color-link, var(--uxaria-color-link));
+.ux-section__container a {
+	color: var(--ux-section-color-link, var(--ux-color-link));
 	text-decoration: none;
 }
 
-.uxaria-section__container a:hover {
+.ux-section__container a:hover,
+.ux-section__container a:focus {
 	text-decoration: underline;
-	color: var(--uxaria-section-color-hover, var(--uxaria-color-link-hover));
-	text-decoration: underline solid var(--uxaria-section-color-link-underline, var(--uxaria-color-link-underline)) 1px;
-	text-underline-offset: var(--uxaria-size-xxs, 0.25rem);
+	color: var(--ux-section-color-hover, var(--ux-color-link-hover));
+	text-decoration: underline solid var(--ux-section-color-link-underline, var(--ux-color-link-underline)) 1px;
+	text-underline-offset: var(--ux-size-xxs, 0.25rem);
 }
 
-.uxaria-section__container a:focus-visible {
-	outline: 3px solid var(--uxaria-section-color-link, var(--uxaria-color-link));
-	outline-offset: var(--uxaria-size-xxs, 0.25rem);
+.ux-section__container a:focus-visible {
+	outline: 3px solid var(--ux-section-color-link, var(--ux-color-link));
+	outline-offset: var(--ux-size-xxs, 0.25rem);
 }

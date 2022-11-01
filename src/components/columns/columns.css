@@ -1,12 +1,12 @@
-.uxaria-columns {
+.ux-columns {
 	display: grid;
 	width: 100%;
-	gap: var(--uxaria-size-m, 1.6rem);
-	grid-template-columns: var(--uxaria-columns-template, 1fr);
+	gap: var(--ux-size-m, 1.6rem);
+	grid-template-columns: var(--ux-columns-template, 1fr);
 }
 
 @media (min-width: 48em) {
-	.uxaria-columns {
-		--uxaria-columns-template: 1fr 1fr;
+	.ux-columns {
+		--ux-columns-template: 1fr 1fr;
 	}
 }

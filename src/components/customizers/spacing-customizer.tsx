@@ -8,9 +8,9 @@ export default component$(() => {
 	const customProperties: string[] = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'];
 
 	return (
-		<div class="uxaria-spacing-customizer">
+		<div class="ux-spacing-customizer">
 			<h3>Spacings</h3>
-			<div class="uxaria-spacing-customizer__input">
+			<div class="ux-spacing-customizer__input">
 				<label>Base size</label>
 				<input
 					type="number"
@@ -21,17 +21,17 @@ export default component$(() => {
 					value={baseSize.value}
 					onChange$={(e: any) => {
 						baseSize.value = e.target.valueAsNumber;
-						document.documentElement.style.setProperty(`--uxaria-size-base`, `${baseSize.value / 100}rem`);
+						document.documentElement.style.setProperty(`--ux-size-base`, `${baseSize.value / 100}rem`);
 					}}
 				/>%
 			</div>
-			<ul class="uxaria-spacing-customizer__output">
+			<ul class="ux-spacing-customizer__output">
 				{customProperties.map((key: string) => (
-					<li class="uxaria-spacing-customizer__property" key={key}>
-						<span class="uxaria-spacing-customizer__placeholder"
-							style={`height: var(--uxaria-size-${key})`}
+					<li class="ux-spacing-customizer__property" key={key}>
+						<span class="ux-spacing-customizer__placeholder"
+							style={`height: var(--ux-size-${key})`}
 						></span>
-						<span class="uxaria-spacing-customizer__css">--uxaria-size-{key}</span>
+						<span class="ux-spacing-customizer__css">--ux-size-{key}</span>
 					</li>
 				))}
 			</ul>

@@ -8,49 +8,49 @@
 
 :root {
 	/* base sizing */
-	--uxaria-size-base: 1rem;
-	--uxaria-size-factor: 1.618;
-	--uxaria-size-factor-sqrt: 1.272;
+	--ux-size-base: 1rem;
+	--ux-size-factor: 1.618;
+	--ux-size-factor-sqrt: 1.272;
 
 	/* spacing sizes */
-	--uxaria-size-xxs: calc(var(--uxaria-size-base) / (var(--uxaria-size-factor) * var(--uxaria-size-factor)));
-	--uxaria-size-xs: calc(var(--uxaria-size-base) / var(--uxaria-size-factor));
-	--uxaria-size-s: var(--uxaria-size-base);
-	--uxaria-size-m: calc(var(--uxaria-size-base) * var(--uxaria-size-factor));
-	--uxaria-size-l: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
-	--uxaria-size-xl: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
-	--uxaria-size-xxl: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
+	--ux-size-xxs: calc(var(--ux-size-base) / (var(--ux-size-factor) * var(--ux-size-factor)));
+	--ux-size-xs: calc(var(--ux-size-base) / var(--ux-size-factor));
+	--ux-size-s: var(--ux-size-base);
+	--ux-size-m: calc(var(--ux-size-base) * var(--ux-size-factor));
+	--ux-size-l: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor));
+	--ux-size-xl: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor));
+	--ux-size-xxl: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor));
 
 	/* fonts sizes */
-	--uxaria-font-size-small: calc(var(--uxaria-size-base) / var(--uxaria-size-factor-sqrt));
-	--uxaria-font-size-base: var(--uxaria-size-base);
-	--uxaria-font-size-large: calc(var(--uxaria-size-base) * var(--uxaria-size-factor-sqrt));
-	--uxaria-font-size-xlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor));
-	--uxaria-font-size-xxlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor-sqrt));
-	--uxaria-font-size-xxxlarge: calc(var(--uxaria-size-base) * var(--uxaria-size-factor) * var(--uxaria-size-factor));
-	--uxaria-line-height-narrow: var(--uxaria-size-factor-sqrt);
-	--uxaria-line-height-base: var(--uxaria-size-factor);
+	--ux-font-size-small: calc(var(--ux-size-base) / var(--ux-size-factor-sqrt));
+	--ux-font-size-base: var(--ux-size-base);
+	--ux-font-size-large: calc(var(--ux-size-base) * var(--ux-size-factor-sqrt));
+	--ux-font-size-xlarge: calc(var(--ux-size-base) * var(--ux-size-factor));
+	--ux-font-size-xxlarge: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor-sqrt));
+	--ux-font-size-xxxlarge: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor));
+	--ux-line-height-narrow: var(--ux-size-factor-sqrt);
+	--ux-line-height-base: var(--ux-size-factor);
 
 	/* containers */
-	--uxaria-container-padding: var(--uxaria-size-m);
-	--uxaria-container-max-width: 69.12em;
+	--ux-container-padding: var(--ux-size-m);
+	--ux-container-max-width: 69.12em;
 
 	/* colors */
-	--uxaria-color-background: white;
-	--uxaria-color-background-alt: #f3f3f3;
-	--uxaria-color-border: #d5d5d5;
-	--uxaria-color-text: #333333;
-	--uxaria-color-text-dimmed: #5c5c5c;
-	--uxaria-color-link: #436bd1;
-	--uxaria-color-link-hover: #3053ad;
-	--uxaria-color-link-underline: #adc0e8;
+	--ux-color-background: white;
+	--ux-color-background-alt: #f3f3f3;
+	--ux-color-border: #d5d5d5;
+	--ux-color-text: #333333;
+	--ux-color-text-dimmed: #5c5c5c;
+	--ux-color-link: #436bd1;
+	--ux-color-link-hover: #3053ad;
+	--ux-color-link-underline: #adc0e8;
 }
 
 html {
 	/* 16px */
 	font-size: 1em;
 	/* square root of 2 */
-	line-height: var(--uxaria-size-factor);
+	line-height: var(--ux-size-factor);
 }
 
 /* 768px till 1152px */
@@ -80,16 +80,16 @@ html {
 /* reduced spacing on smaller devices */
 @media (max-aspect-ratio: 3/4) and (max-width: 72em) {
 	:root {
-		--uxaria-size-factor: 1.5;
-		--uxaria-size-factor-sqrt: 1.225;
+		--ux-size-factor: 1.5;
+		--ux-size-factor-sqrt: 1.225;
 	}
 }
 
 /* even more reduced spacing on smaller devices with very unequal screen sizes */
 @media (max-aspect-ratio: 2/3) and (max-width: 48em) {
 	:root {
-		--uxaria-size-factor: 1.414;
-		--uxaria-size-factor-sqrt: 1.189;
+		--ux-size-factor: 1.414;
+		--ux-size-factor-sqrt: 1.189;
 	}
 }
 
