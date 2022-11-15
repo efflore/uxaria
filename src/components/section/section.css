@@ -46,7 +46,6 @@
 	box-sizing: border-box;
 }
 
-.ux-section__container h1,
 .ux-section__container h2,
 .ux-section__container h3,
 .ux-section__container h4,
@@ -55,10 +54,6 @@
 	margin-top: 1em;
 	margin-bottom: max(0.41em, var(--ux-size-s, 1rem));
 	line-height: var(--ux-line-height-narrow, 1.25);
-}
-
-.ux-section__container h1 {
-	font-size: var(--ux-font-size-xxxlarge, calc(2.5 * var(--ux-font-size-base, 1rem)));
 }
 
 .ux-section__container h2 {
@@ -73,39 +68,10 @@
 	font-size: var(--ux-font-size-large, calc(1.25 * var(--ux-font-size-base, 1rem)));
 }
 
-.ux-section__container h1:first-child,
 .ux-section__container h2:first-child,
 .ux-section__container h3:first-child,
 .ux-section__container h4:first-child,
 .ux-section__container h5:first-child,
 .ux-section__container h6:first-child {
 	margin-top: 0;
-}
-
-.ux-section__container p {
-	max-width: 32em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-
-.ux-section__container p:first-child {
-	margin-top: 0;
-}
-
-.ux-section__container a {
-	color: var(--ux-section-color-link, var(--ux-color-link));
-	text-decoration: none;
-}
-
-.ux-section__container a:hover,
-.ux-section__container a:focus {
-	text-decoration: underline;
-	color: var(--ux-section-color-hover, var(--ux-color-link-hover));
-	text-decoration: underline solid var(--ux-section-color-link-underline, var(--ux-color-link-underline)) 1px;
-	text-underline-offset: var(--ux-size-xxs, 0.25rem);
-}
-
-.ux-section__container a:focus-visible {
-	outline: 3px solid var(--ux-section-color-link, var(--ux-color-link));
-	outline-offset: var(--ux-size-xxs, 0.25rem);
 }

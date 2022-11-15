@@ -1,0 +1,98 @@
+/**
+ * Base Article Styling
+ */
+.ux-article {
+	background-color: var(--ux-color-background);
+	color: var(--ux-color-text);
+	font-size: var(--ux-font-size-base, 1rem);
+	line-height: var(--ux-line-height-base, 1.6);
+	font-family: var(--ux-article-font-family, sans-serif);
+	padding-top: var(--ux-article-padding, var(--ux-size-xl, 2.6rem));
+	padding-bottom: var(--ux-article-padding, var(--ux-size-xl, 2.6rem));
+	max-width: var(--ux-container-max-width, 65rem);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ux-article__head {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-areas: '. author date' '. keywords .' 'preview title .' 'preview lead .' 'content content content';
+	gap: 0 var(--ux-size-s);
+	padding: 0 var(--ux-container-padding) var(--ux-size-l);
+}
+
+.ux-article__author {
+	grid-area: author;
+}
+
+.ux-article__date {
+	grid-area: date;
+	text-align: end;
+}
+
+.ux-article__keywords {
+	grid-area: keywords;
+}
+
+.ux-article__author p,
+.ux-article__date p,
+.ux-article__keywords p,
+.ux-article__lead p {
+	margin: 0;
+}
+
+.ux-article__title {
+	grid-area: title;
+}
+
+.ux-article__title h1 {
+	font-size: var(--ux-font-size-xxxlarge, calc(2.5 * var(--ux-font-size-base, 1rem)));
+	margin: 0 0 max(0.41em, var(--ux-size-s, 1rem));
+	line-height: var(--ux-line-height-narrow, 1.25);
+}
+
+.ux-article__lead {
+	grid-area: lead;
+	font-size: var(--ux-font-size-large);
+}
+
+.ux-article__preview {
+	grid-area: preview;
+	text-align: center;
+	background: linear-gradient(90deg, var(--ux-color-background-alt), transparent)
+}
+
+.ux-article__preview svg {
+	margin-top: 0.5em;
+	max-height: 80%;
+	max-width: 50%;
+}
+
+.ux-article__content {
+	grid-area: content;
+}
+
+.ux-article p {
+	max-width: 32em;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.ux-article a {
+	color: var(--ux-section-color-link, var(--ux-color-link));
+	text-decoration: none;
+}
+
+.ux-article a:hover,
+.ux-article a:focus {
+	text-decoration: underline;
+	color: var(--ux-section-color-hover, var(--ux-color-link-hover));
+	text-decoration: underline solid var(--ux-section-color-link-underline, var(--ux-color-link-underline)) 1px;
+	text-underline-offset: var(--ux-size-xxs, 0.25rem);
+}
+
+.ux-article a:focus-visible {
+	outline: 3px solid var(--ux-section-color-link, var(--ux-color-link));
+	outline-offset: var(--ux-size-xxs, 0.25rem);
+}

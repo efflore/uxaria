@@ -1,0 +1,9 @@
+.ux-typography-customizer {
+	margin-bottom: var(--ux-size-m, 1.6rem);
+}
+
+.ux-typography-customizer__output {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

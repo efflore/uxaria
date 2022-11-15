@@ -1,0 +1,24 @@
+.ux-author {
+	position: relative;
+	display: inline-block;
+}
+
+.ux-author__instance {
+	color: var(--ux-color-link-underline);
+}
+
+.ux-author__avatar {
+	position: absolute;
+	display: block;
+	width: var(--ux-size-l);
+	height: var(--ux-size-l);
+	background-color: var(--ux-color-link-underline);
+	border-radius: 100%;
+	top: -0.3em;
+	left: calc(-1 * (var(--ux-size-l) + var(--ux-size-s)));
+}
+
+.ux-author:hover .ux-author__avatar,
+.ux-author:focus .ux-author__avatar {
+	transform: scale(1.01);
+}

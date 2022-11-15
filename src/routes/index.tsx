@@ -14,6 +14,7 @@ import { QwikLogo } from '~/components/logos/qwik';
 
 import SpacingCustomizer from '~/components/customizers/spacing-customizer';
 import ColorCustomizer from '~/components/customizers/color-customizer';
+import TypographyCustomizer from '~/components/customizers/typography-customizer';
 
 export const head: DocumentHead = {
 	title: 'Uxaria',
@@ -88,7 +89,10 @@ export default component$(() => {
 
 			<Section variant="customizers">
 				<h2>Customize</h2>
-				<SpacingCustomizer />
+				<Columns>
+					<SpacingCustomizer />
+					<TypographyCustomizer />
+				</Columns>
 				<ColorCustomizer />
 			</Section>
 
