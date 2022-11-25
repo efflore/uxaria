@@ -1,0 +1,15 @@
+.ux-hash-tags {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.ux-hash-tags li {
+	margin: 0 0.5em 0 0;
+	padding: 0;
+}
+
+.ux-hash-tags__hash {
+	color: var(--ux-color-link-underline);
+}

@@ -18,11 +18,9 @@ export const RouterHead = component$(() => {
 
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-			<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet" />
+			<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&amp;family=Fira+Sans+Condensed:wght@700&amp;family=Fira+Code&amp;display=swap" rel="stylesheet" />
 
-			<meta property="og:site_name" content="Qwik" />
-			<meta name="twitter:site" content="@QwikDev" />
-			<meta name="twitter:title" content="Qwik" />
+			<meta property="og:site_name" content="Uxaria" />
 
 			{head.meta.map((m) => (
 				<meta {...m} />

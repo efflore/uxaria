@@ -42,6 +42,6 @@ a.ux-icon-link:active {
 	align-self: center;
 }
 
-.ux-icon-link__name p:last-child {
-	margin-bottom: 0;
+.ux-icon-link__name p {
+	margin: 0;
 }

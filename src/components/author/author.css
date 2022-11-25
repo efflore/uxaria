@@ -1,6 +1,15 @@
 .ux-author {
-	position: relative;
-	display: inline-block;
+	display: flex;
+	gap: var(--ux-size-xs, 0.6rem);
+	align-items: center;
+}
+
+.ux-author__name {
+	order: 2;
+}
+
+.ux-author__name strong {
+	font-weight: bold;
 }
 
 .ux-author__instance {
@@ -8,17 +17,26 @@
 }
 
 .ux-author__avatar {
-	position: absolute;
+	order: 1;
+	flex-shrink: 0;
 	display: block;
-	width: var(--ux-size-l);
-	height: var(--ux-size-l);
+	width: 2.5em;
+	height: 2.5em;
 	background-color: var(--ux-color-link-underline);
 	border-radius: 100%;
-	top: -0.3em;
-	left: calc(-1 * (var(--ux-size-l) + var(--ux-size-s)));
+	overflow: hidden;
 }
 
-.ux-author:hover .ux-author__avatar,
-.ux-author:focus .ux-author__avatar {
-	transform: scale(1.01);
+.ux-author__avatar img {
+	width: inherit;
+}
+
+@media (min-width: 32em) {
+	.ux-author {
+		padding-left: 0;
+	}
+
+	.ux-author__avatar {
+		left: -3em;
+	}
 }

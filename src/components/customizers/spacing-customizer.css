@@ -20,3 +20,10 @@
 	width: 50%;
 	background-color: #d7b0de;
 }
+
+/* dark color theme */
+@media (prefers-color-scheme: dark) {
+	.ux-spacing-customizer__placeholder {
+		background-color: #5d236a;
+	}
+}

@@ -2,8 +2,9 @@ import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 import { Article } from '~/components/article/article';
-import { Author } from '~/components/author/author';
+import { AuthorProps } from '~/components/author/author';
 import Columns from '~/components/columns/columns';
+import { JSLogo } from '~/components/logos/js';
 import { Section } from '~/components/section/section';
 
 export const head: DocumentHead = {
@@ -17,13 +18,16 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
+	const author: AuthorProps = {
+		name: 'Esther Brunner',
+		user: 'esthr',
+		instance: 'chaos.social',
+	};
+
 	return (
-		<Article datePublished="2022-11-14">
+		<Article id="article__js" author={author} datePublished="2022-11-14" keywords={['JavaScript', 'Qwik', 'Performance']}>
 			<h1 q:slot="title">{head.title}</h1>
-			<div q:slot="author">
-				<Author name="Esther Brunner" user="esthr" instance="chaos.social" />
-			</div>
-			<p q:slot="keywords">JavaScript, Qwik, Performance</p>
+			<div q:slot="preview"><JSLogo /></div>
 			<p q:slot="description">{head.meta?.find((m) => m.name === 'description')?.content}</p>
 
 			<Section>

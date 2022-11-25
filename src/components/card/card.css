@@ -32,7 +32,8 @@ a.ux-card:active {
 .ux-card__preview {
 	grid-area: preview;
 	aspect-ratio: 21 / 9;
-	background-color: var(--ux-section-color-background-alt, var(--ux-color-background-alt));
+	background: linear-gradient(180deg, var(--ux-color-background-alt), transparent);
+	/* background: var(--ux-color-background-alt); */
 	margin: 0;
 	overflow: hidden;
 }
@@ -70,4 +71,8 @@ a.ux-card:active {
 .ux-card:hover .ux-card__content,
 .ux-card:focus .ux-card__content {
 	color: var(--ux-section-color-text, var(--ux-color-text));
+}
+
+.ux-card__content p {
+	margin-top: 0;
 }

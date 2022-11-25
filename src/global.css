@@ -21,6 +21,11 @@
 	--ux-size-xl: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor));
 	--ux-size-xxl: calc(var(--ux-size-base) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor) * var(--ux-size-factor));
 
+	/* font families */
+	--ux-font-family-body: 'Fira Sans', sans-serif;
+	--ux-font-family-heading: 'Fira Sans Condensed', sans-serif;
+	--ux-font-family-monospace: 'Fira Code', monospace;
+
 	/* fonts sizes */
 	--ux-font-size-small: calc(var(--ux-size-base) / var(--ux-size-factor-sqrt));
 	--ux-font-size-base: var(--ux-size-base);
@@ -53,6 +58,11 @@ html {
 	line-height: var(--ux-size-factor);
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 /* 768px till 1152px */
 @media screen and (min-width: 48em) and (max-width: 72em) {
 	html {
@@ -78,7 +88,7 @@ html {
 }
 
 /* reduced spacing on smaller devices */
-@media (max-aspect-ratio: 3/4) and (max-width: 72em) {
+@media screen and (max-aspect-ratio: 3/4) and (max-width: 72em) {
 	:root {
 		--ux-size-factor: 1.5;
 		--ux-size-factor-sqrt: 1.225;
@@ -86,14 +96,23 @@ html {
 }
 
 /* even more reduced spacing on smaller devices with very unequal screen sizes */
-@media (max-aspect-ratio: 2/3) and (max-width: 48em) {
+@media screen and (max-aspect-ratio: 2/3) and (max-width: 48em) {
 	:root {
 		--ux-size-factor: 1.414;
 		--ux-size-factor-sqrt: 1.189;
 	}
 }
 
-body {
-	margin: 0;
-	padding: 0;
+/* dark color theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ux-color-background: #333333;
+		--ux-color-background-alt: #5c5c5c;
+		--ux-color-border: #989898;
+		--ux-color-text: white;
+		--ux-color-text-dimmed: #c3c3c3;
+		--ux-color-link: #85a3e8;
+		--ux-color-link-hover: #adc0e8;
+		--ux-color-link-underline: #436bd1;
+	}
 }

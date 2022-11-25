@@ -15,6 +15,8 @@ import { QwikLogo } from '~/components/logos/qwik';
 import SpacingCustomizer from '~/components/customizers/spacing-customizer';
 import ColorCustomizer from '~/components/customizers/color-customizer';
 import TypographyCustomizer from '~/components/customizers/typography-customizer';
+import { Article } from '~/components/article/article';
+import { AuthorProps } from '~/components/author/author';
 
 export const head: DocumentHead = {
 	title: 'Uxaria',
@@ -27,12 +29,19 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
+	const author: AuthorProps = {
+		name: 'Esther Brunner',
+		user: 'esthr',
+		instance: 'chaos.social',
+	};
+
 	return (
-		<>
-			<Section variant="lead">
-				<h1>{head.title}</h1>
-				<p>{head.meta?.find((m) => m.name === 'description')?.content}</p>
-			</Section>
+		<Article id="article__uxaria" author={author} datePublished="2022-11-15">
+			<h1 q:slot="title">{head.title}</h1>
+			<div q:slot="preview">
+				<ColorScale colors={['#d7deee', '#adc0e8', '#85a3e8', '#6086e3', '#436bd1', '#3053ad', '#243d7c', '#1a2849', '#0c111b']} />
+			</div>
+			<p q:slot="description">{head.meta?.find((m) => m.name === 'description')?.content}</p>
 
 			<Section variant="cards">
 				<h2>Why Uxaria?</h2>
@@ -71,7 +80,7 @@ export default component$(() => {
 
 					<Card link="/docs/design-visually">
 						<h3 q:slot="title">Design Visually</h3>
-						<p>Find the best values for CSS variables mastching your design in our visual customizer. Colors, spacing, typography.</p>
+						<p>Find the best values for CSS variables matching your design in our visual customizer. Colors, spacing, typography.</p>
 						<div q:slot="preview">
 							<ColorScale colors={['#d7deee', '#adc0e8', '#85a3e8', '#6086e3', '#436bd1', '#3053ad', '#243d7c', '#1a2849', '#0c111b']} />
 						</div>
@@ -125,6 +134,6 @@ export default component$(() => {
 					</Card>
 				</Columns>
 			</Section>
-		</>
+		</Article>
 	);
 });

@@ -6,7 +6,6 @@
 	color: var(--ux-section-color-text, var(--ux-color-text));
 	font-size: var(--ux-font-size-base, 1rem);
 	line-height: var(--ux-line-height-base, 1.6);
-	font-family: var(--ux-section-font-family, sans-serif);
 	padding-top: var(--ux-section-padding, var(--ux-size-l, 2.6rem));
 	padding-bottom: var(--ux-section-padding, var(--ux-size-l, 2.6rem));
 }
@@ -51,8 +50,9 @@
 .ux-section__container h4,
 .ux-section__container h5,
 .ux-section__container h6 {
+	font-family: var(--ux-font-family-heading, serif);
 	margin-top: 1em;
-	margin-bottom: max(0.41em, var(--ux-size-s, 1rem));
+	margin-bottom: max(0.272em, var(--ux-size-xs, 0.4rem));
 	line-height: var(--ux-line-height-narrow, 1.25);
 }
 

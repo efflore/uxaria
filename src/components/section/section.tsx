@@ -4,6 +4,7 @@ import styles from './section.css?inline';
 export interface SectionProps {
 	variant?: string;
 }
+
 export const Section = component$((props: SectionProps) => {
 	useStyles$(styles);
 
